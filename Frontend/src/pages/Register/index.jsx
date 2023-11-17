@@ -1,10 +1,11 @@
+import FormRegister from '../../components/FormRegister'
 import Layouts from '../../layouts'
 
 const Register = () => {
   return (
     <div>
       <Layouts>
-        <Register/>
+        <FormRegister buttonText={"Register"} pathText={"/"}/>
       </Layouts>
     </div>
   )

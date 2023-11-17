@@ -1,32 +1,23 @@
-input:checked {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-}
-
-#forgot {
+#linkLogin {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-#forgot:hover {
+#linkLogin:hover {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-#signUp {
-    font-weight: 600;
+#linkTerms {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-#signUp:hover {
+#linkTerms:hover {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
-
-#signUp:hover {
-    text-decoration: dashed;
 }
