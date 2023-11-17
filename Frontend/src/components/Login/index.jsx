@@ -7,9 +7,6 @@ const FormLogin = ({buttonText, pathText}) => {
     <div>
       <section className="bg-gray-50 dark:bg-gray-900">
   <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-    <Link href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-      <img className="mx-auto w-20" src="/src/assets/images/logo.png" alt="logo" />  
-    </Link>
     <div className="w-full bg-black rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
       <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -36,8 +33,8 @@ const FormLogin = ({buttonText, pathText}) => {
             <Link id="forgot" href="#" className="text-sm font-medium">Forgot password?</Link>
           </div>
           <Button buttonName={buttonText} path={pathText}/>
-          <p id="pLogin" className="text-sm">
-            Don’t have an account yet? <Link id="signUp" href="#" className="font-medium">Sign up</Link>
+          <p className="text-sm text-white">
+            Don’t have an account yet? <Link id="signUp" to={"/register"} className="font-medium">Sign up</Link>
           </p>
         </form>
       </div>
