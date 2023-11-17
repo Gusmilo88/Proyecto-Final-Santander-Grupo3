@@ -56,6 +56,8 @@ const Home = () => {
               evento={evento}
               buttonText="See more"
               pathText={"/details/" + evento._id}
+              buttonTextCart={ 'add to cart' }
+              pathTextCart={ '/' }
             />
           ))}
         </div>

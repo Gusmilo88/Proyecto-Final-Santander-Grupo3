@@ -1,7 +1,7 @@
 import "./style.css";
 import Button from "../Button";
 
-const Cards = ({evento, buttonText, pathText}) => {
+const Cards = ({evento, buttonText, pathText, buttonTextCart, pathTextCart}) => {
   return (
     <>
     <div role="cards">
@@ -23,27 +23,30 @@ const Cards = ({evento, buttonText, pathText}) => {
         <div className="px-6 pt-4 pb-2 flex justify-center">
           <span
             id="span1"
-            className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white"
+            className="inline-block rounded-full px-3 py-1 text-sm font-semibold"
           >
             <i
               className="fa-solid fa-clock fa-beat"
-              style={{ color: "#ffffff" }}
+              style={{ color: "#000000" }}
             />{" "}
             {evento.date}
           </span>
           <span
             id="span2"
-            className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white"
-          >
-            <i
-              className="fa-solid fa-location-dot fa-beat"
-              style={{ color: "#ffffff" }}
+            className="inline-block rounded-full px-3 py-1 text-sm font-semibold">
+            <i className="fa-solid fa-location-dot fa-beat"
+              style={{ color: "#000000" }}
             />{" "}
             {evento.place}
           </span>
         </div>
-        <div className="mb-12 pb-1 pt-1 text-center">
+        <div className="flex">
+        <div className="flex-grow mb-4 pb-1 pt-1 text-center">
           <Button buttonName={buttonText} path={pathText}/>
+        </div>
+         <div className="flex-grow mb-4 pb-1 pt-1 text-center">
+          <Button buttonName={buttonTextCart} path={pathTextCart}/>
+        </div>
         </div>
       </div>
     </div>

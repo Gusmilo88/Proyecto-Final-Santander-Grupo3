@@ -13,7 +13,10 @@
 }
 
 #span1, #span2 {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: black;
     margin: 5px;
 }
 
+.buton-cart{
+    background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%);
+}
