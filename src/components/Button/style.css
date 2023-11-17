@@ -1,0 +1,7 @@
+#btn-seeMore {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#btn-seeMore:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+}

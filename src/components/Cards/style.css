@@ -1,0 +1,19 @@
+#divContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+#divContainerCard {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#span1, #span2 {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    margin: 5px;
+}
+

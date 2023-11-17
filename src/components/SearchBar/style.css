@@ -1,0 +1,11 @@
+input:focus {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#button-addon1 {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#button-addon1:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+}

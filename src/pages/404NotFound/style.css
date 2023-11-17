@@ -1,0 +1,72 @@
+
+
+.container404 {
+  background-image: url("/src/assets/images/404universe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+
+.containerIMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAstronaut img {
+    width: 40vh;
+    margin-right: 50px;
+    animation: floatAstronaut 5s linear infinite;
+  }
+  
+  .containerDog img {
+    width: 45vh;
+    animation: floatDog 6s linear infinite;
+  }
+  
+  @keyframes floatAstronaut {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+  
+  @keyframes floatDog {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+  }
+
+
+.containerWorld img{
+    width: 56vh;
+}
+
+.containerText {
+  margin-top: 80px;
+}
+
+.h2404 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: 10vh;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0 rgb(6, 6, 6);
+}
+
+.p404 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: 5vh;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0 rgb(6, 6, 6);
+}

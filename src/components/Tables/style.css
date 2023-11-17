@@ -1,0 +1,11 @@
+tr {
+    background-color: rgb(0, 0, 0);
+}
+
+th {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
