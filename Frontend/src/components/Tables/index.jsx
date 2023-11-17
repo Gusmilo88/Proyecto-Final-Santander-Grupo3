@@ -27,7 +27,7 @@ const Tables = ({ events, highestAttendanceEvent, highestAttendancePercentage,lo
       </table>
       </div>
 
-      <div className="text-center my-5">
+      <div className="text-center my-5 m-5">
       <table className="table table-dark table-striped">
         <thead>
           <tr>
@@ -52,7 +52,7 @@ const Tables = ({ events, highestAttendanceEvent, highestAttendancePercentage,lo
       </div>
 
 
-      <div className="text-center my-5">
+      <div className="text-center my-5 m-5">
       <table className="table table-dark table-striped">
         <thead>
           <tr>
