@@ -5,7 +5,7 @@ const Tables = ({ events, highestAttendanceEvent, highestAttendancePercentage,lo
   return (
     <div role="tables">
       {/* Tabla Events */}
-      <div className="text-center my-5">
+      <div className="text-center my-5 m-5">
       <table className="table table-dark table-striped">
         <thead>
           <tr>
