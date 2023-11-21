@@ -57,6 +57,14 @@ const deleteEvent = async (id) => {
     await eventDAL.deleteEvent(id); 
 }
 
+const getCommentByEvent = async (id) => {
+    const event = await eventDAL.getEventById(id);
+    if (!event) {
+        throw new Error('No se encontro el evento')
+    }
+    return await eventDAL.getCommentByEvent(id);
+}
+
 const checkDateValidity = (date, estimate, assistance) => {
     let dateNow = new Date();
     if ((dateNow > new Date(date) && estimate) || (dateNow <= new Date(date) && assistance)) {
@@ -74,5 +82,6 @@ module.exports = {
     getEventsById,
     createdEvents,
     updateEvent,
-    deleteEvent
+    deleteEvent,
+    getCommentByEvent
 }

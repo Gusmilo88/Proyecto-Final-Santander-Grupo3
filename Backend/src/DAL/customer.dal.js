@@ -7,6 +7,9 @@ class CustomerDAL {
     async createCustomer(body){
         return new Customer(body).save();
     }
+    async getCustomerById(id){
+        return await Customer.findById(id);
+    }
 }
 
 module.exports = CustomerDAL;
