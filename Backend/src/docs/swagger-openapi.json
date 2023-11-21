@@ -91,6 +91,7 @@
                     "Events"
                 ],
                 "summary": "Obteniendo todos los eventos",
+                "description": "Se obtiene todos los eventos guardados en la base de datos",
                 "responses": {
                     "200": {
                         "description": "Muestra todos los eventos"
@@ -105,13 +106,13 @@
                     "Events"
                 ],
                 "summary": "Crear un evento nuevo en la base de datos",
+                "description": "El usuario ADMIN tiene el permiso para guardar un evento",
                 "security": [
                     {
                         "Bearer": []
                     }
                 ],
                 "requestBody": {
-                    "description": "Ingresar los datos para el nuevo evento, chequear la propiedad assistence o estimate",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -126,6 +127,9 @@
                     },
                     "401": {
                         "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser ADMIN"
                     },
                     "404": {
                         "description": "El nombre está repetido o hay incosistencias entre las fechas"
@@ -142,6 +146,7 @@
                     "Events"
                 ],
                 "summary": "Obteniendo un evento por id",
+                "description": "Devuelve el evento guardado por el id",
                 "parameters": [
                     {
                         "name": "id",
@@ -170,6 +175,7 @@
                     "Events"
                 ],
                 "summary": "Editar el evento por id",
+                "description": "El usuario ADMIN tiene el permiso para editar un evento",
                 "security": [
                     {
                         "Bearer": []
@@ -187,7 +193,6 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "Ingresar los datos editar un evento, chequear la propiedad assistence o estimate",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -199,6 +204,12 @@
                 "responses": {
                     "204": {
                         "description": "Evento editado correctamente"
+                    },
+                    "401": {
+                        "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser ADMIN"
                     },
                     "404": {
                         "description": "El id no fue encontrado o hay incosistencias entre las fechas"
@@ -213,6 +224,7 @@
                     "Events"
                 ],
                 "summary": "Eliminar el evento por id",
+                "description": "El usuario ADMIN tiene el permiso para eliminar un evento",
                 "security": [
                     {
                         "Bearer": []
@@ -233,8 +245,153 @@
                     "204": {
                         "description": "Evento eliminado correctamente"
                     },
+                    "401": {
+                        "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser ADMIN"
+                    },
                     "404": {
                         "description": "El id no fue encontrado"
+                    },
+                    "500": {
+                        "description": "Error en le base de datos o en la query"
+                    }
+                }
+            }
+        },
+        "/api/event/{id}/message": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "sumary": "Obtener los mensajes por eventos",
+                "description": "Obtiene todo los mensaje que recibio el evento por id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID del evento para buscar mensaje"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Se obtiene todos los eventos con sus comentarios"
+                    },
+                    "500": {
+                        "description": "Error en le base de datos o en la query"
+                    }
+                }
+            }
+        },
+        "/api/buy": {
+            "get": {
+                "tags": [
+                    "Buy"
+                ],
+                "summary": "Muestra las compras realizada por el usuario",
+                "description": "Muestra los eventos comprado por el USER, para eso tiene que estar loggeado",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Muestra toda la entrada del evento comprado"
+                    },
+                    "401": {
+                        "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser USER"
+                    },
+                    "500": {
+                        "description": "Error en le base de datos o en la query"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Buy"
+                ],
+                "summary": "Compras de eventos por el usuario",
+                "description": "Ingresar los datos guardar la compra, para que se guarde una compra se tiene que realizar un array de eventos",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/buys"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Evento comprado correctamente"
+                    },
+                    "401": {
+                        "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser USER"
+                    },
+                    "500": {
+                        "description": "Error en le base de datos o en la query"
+                    }
+                }
+            }
+        },
+        "/api/comment/{id}/event": {
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "Crear un commentario en el evento",
+                "description": "Ingresar un mensaje y pasarle el id del evento, y el usuario tiene que estar loggeado con el rol USER",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ID del evento para buscar mensaje"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/message"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Se guardo correctamente el mensaje"
+                    },
+                    "401": {
+                        "description": "No tiene el permiso para está accion"
+                    },
+                    "403": {
+                        "description": "El usuario loggeado tiene que ser USER"
                     },
                     "500": {
                         "description": "Error en le base de datos o en la query"
@@ -370,6 +527,36 @@
                             "ADMIN",
                             "USER"
                         ]
+                    }
+                }
+            },
+            "buys": {
+                "schema": {
+                    "type": "array"
+                },
+                "items": {
+                    "type": "object"
+                },
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "El nombre de evento"
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "description": "Cantidad de personas"
+                    },
+                    "price": {
+                        "type": "number",
+                        "description": "El precio del evento"
+                    }
+                }
+            },
+            "message": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string"
                     }
                 }
             }
