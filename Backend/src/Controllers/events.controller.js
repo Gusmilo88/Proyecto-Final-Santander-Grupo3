@@ -49,10 +49,21 @@ const deleteEvent = async (req,res) => {
     }
 }
 
+const getCommentByEvent = async (req,res) => {
+    try {
+        let id = req.params.id;
+        const event = await EventsService.getCommentByEvent(id);
+        res.status(200).json(event)
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+
 module.exports = {
     getAllEvents,
     getEventById,
     createdEvents,
     updateEvent,
-    deleteEvent
+    deleteEvent,
+    getCommentByEvent
 }
