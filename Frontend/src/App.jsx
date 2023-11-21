@@ -8,6 +8,8 @@ import UpcomingEvents from "./pages/UpcomingEvents"
 import PastEvents from "./pages/PastEvents"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Cart from "./pages/Cart"
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route path="/stats" element={<Stats/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
     </>
