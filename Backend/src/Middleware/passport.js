@@ -7,10 +7,10 @@ var opt = {};
 opt.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opt.secretOrKey = 'secretkey';
 
-passport.use(new JwtStrategy(opt, (jwtPayload, done) => {
-        const { rol,username } = jwtPayload;
-        if (rol != 'ADMIN') {
+passport.use(new JwtStrategy(opt, (payload, done) => {
+        if (payload == null) {
            return done(null,false)
         }
-        return done(null,username)
+        const user = payload;
+        return done(null,user)
 }))

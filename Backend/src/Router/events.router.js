@@ -1,16 +1,19 @@
 const express = require('express');
-const { getAllEvents, getEventById, createdEvents, updateEvent, deleteEvent } = require('../Controllers/events.controller');
+const { getAllEvents, getEventById, createdEvents, updateEvent, deleteEvent, getCommentByEvent } = require('../Controllers/events.controller');
 const passport = require('passport');
+const checkRole = require('../Middleware/checked.role');
 const router = express.Router();
 
 router.get('/events', getAllEvents);
 
 router.get('/events/:id', getEventById);
 
-router.post('/events',passport.authenticate('jwt',{session: false}),createdEvents);
+router.get('/event/:id/message', getCommentByEvent);
 
-router.put('/events/:id',passport.authenticate('jwt',{session: false}),updateEvent);
+router.post('/events',passport.authenticate('jwt',{session: false}),checkRole('ADMIN'),createdEvents);
 
-router.delete('/events/:id',passport.authenticate('jwt',{session: false}),deleteEvent);
+router.put('/events/:id',passport.authenticate('jwt',{session: false}),checkRole('ADMIN'),updateEvent);
+
+router.delete('/events/:id',passport.authenticate('jwt',{session: false}),checkRole('ADMIN'),deleteEvent);
 
 module.exports = router;

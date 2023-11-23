@@ -6,7 +6,7 @@ const register = async (req,res) => {
         const customer = await customerService.register(body)
         res.status(201).json(customer);
     } catch (error) {
-        res.status(500).error({error: error.message});
+        res.status(500).json({error: error.message});
     }
 }
 

@@ -40,6 +40,12 @@ const eventsSchema = new mongoose.Schema({
     estimate:{
         type: Number,
     },
+    comment: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment'
+        }
+    ]
 }) 
 
 const Events = mongoose.model('Events',eventsSchema);

@@ -6,3 +6,22 @@ h1 {
     margin: 5vh;
     font-weight: 600;
 }
+
+.card-title {
+    font-size: 20px;
+
+  }
+  
+.custom-container {
+    border-radius: 10px;
+}
+
+    
+  .slick-prev:before, .slick-next:before {
+    color: black !important;
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  

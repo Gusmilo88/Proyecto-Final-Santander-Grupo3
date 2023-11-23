@@ -8,7 +8,7 @@
 #divContainerCard {
     display: flex;
     gap: 4rem;
-    flex-wrap: wrap;
+
     justify-content: center;
 }
 
@@ -19,4 +19,13 @@
 
 .buton-cart{
     background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%);
+}
+
+.parrafo{
+    width:50%;
+    height:20px;
+    font-size:16px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
 }

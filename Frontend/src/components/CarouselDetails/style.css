@@ -1,0 +1,8 @@
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  

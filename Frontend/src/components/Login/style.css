@@ -30,3 +30,8 @@ input:checked {
 #signUp:hover {
     text-decoration: dashed;
 }
+
+.section-login {
+    background-image: url('/src/assets/images/luces.jpg');
+    }
+  

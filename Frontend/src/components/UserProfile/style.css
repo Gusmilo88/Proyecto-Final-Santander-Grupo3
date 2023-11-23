@@ -1,0 +1,84 @@
+/* UserProfile.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  /* Contenedor principal */
+  .user-profile-container {
+    padding: 20px;
+  }
+  
+  /* Barra superior */
+  .user-profile-container img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .user-profile-container input[type="search"] {
+    margin-left: 10px;
+    padding: 5px;
+    width: 200px;
+  }
+  
+  /* Sección de información del usuario */
+  .user-profile-container section {
+    margin-top: 20px;
+  }
+  
+  .user-profile-container img[src="imagen.png"] {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  .user-profile-container h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* Sección de pedidos */
+  .user-profile-container button {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Sección de intereses y eventos que sigue */
+  .user-profile-container h2 {
+    margin-top: 20px;
+  }
+  
+  /* Botón para ver eventos */
+  .user-profile-container .button-ver-eventos {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos para la barra lateral derecha */
+  .user-profile-container div[style="float: right;"] {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  .user-profile-container div[style="float: right;"] img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  
+  .user-profile-container div[style="float: right;"] span {
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  

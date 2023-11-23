@@ -177,8 +177,10 @@ const Checkboxs = ({setEventosFiltrados}) => {
     </div>
           </label>
         </div>
+      </div>
 
-        {/*Books checkbox*/}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+          {/*Books checkbox*/}
         <div
           className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
         >
@@ -267,7 +269,7 @@ const Checkboxs = ({setEventosFiltrados}) => {
     </div>
           </label>
         </div>
-      </div>
+        </div>
     </div>
   );
 };

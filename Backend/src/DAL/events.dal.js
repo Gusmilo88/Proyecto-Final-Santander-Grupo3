@@ -19,6 +19,9 @@ class EventsDAL {
     async deleteEvent(id){
         await Events.findByIdAndDelete(id);
     }
+    async getCommentByEvent(id){
+        return await Events.findById(id).populate('comment')
+    }
 }
 
 module.exports = EventsDAL;
