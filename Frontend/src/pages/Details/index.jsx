@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Layouts from '../../layouts/index';
 import Detalles from '../../components/Detalles';
+import DivH2 from '../../components/DivH2'
 import CarouselDetails from '../../components/CarouselDetails';
+import Comentarios from '../../components/Comentarios';
 import { useParams } from 'react-router-dom';
 
 function Details() {
@@ -57,7 +59,10 @@ function Details() {
     <Layouts>
       <div>
       <Detalles evento={evento} />
+      <DivH2 title="Próximos Eventos"/>
       {eventos.length > 0 && <CarouselDetails events={eventos} currentEvent={evento} />}
+      <DivH2 title="Comentarios"/>
+      <div><Comentarios /></div>
       </div>
     </Layouts>
   );

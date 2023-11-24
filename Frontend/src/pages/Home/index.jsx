@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import Carousel from '../../components/Carousel'
 import { useDispatch, useSelector } from 'react-redux'
 import eventosActions from '../../store/actions/eventosActions'
+import FloatingLogo from '../../components/FloatingLogo'
 
 
 useDispatch
@@ -49,7 +50,7 @@ const Home = () => {
       <SearchBar setEventosFiltrados={setEventosFiltrados} />
       <Checkboxs setEventosFiltrados={setEventosFiltrados}/>
       <DivH2 title="Todos nuestros eventos:"/>
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-4 justify-center mx-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-5 gap-4 justify-center mx-4">
           {eventosFiltrados.map((evento) => (
             <Cards
               key={evento._id}
@@ -61,6 +62,7 @@ const Home = () => {
             />
           ))}
         </div>
+        <FloatingLogo />
       </Layouts>
     </>
   )

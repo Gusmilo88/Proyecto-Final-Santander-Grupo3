@@ -18,7 +18,7 @@ const Detalles = ({ evento }) => {
         </video>
       </div>
       <div className="container px-5 py-24 mx-auto">
-        <div className="card mb-3 mx-auto bg-black bg-opacity-80 rounded-lg shadow" style={{ position: 'relative', top: 50 }}>
+        <div className="card mb-3 mx-auto bg-black bg-opacity-55 rounded-lg shadow" style={{ position: 'relative', top: 50 }}>
           <div className="row g-0 lg:items-center">
             <div className="col-md-5 col-12 d-flex align-items-stretch justify-content-center h-100">
               <EventImage image={evento.image} className="rounded-start h-full w-100" />

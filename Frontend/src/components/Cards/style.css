@@ -2,15 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px;
+    margin: 10px;
 }
 
 #divContainerCard {
     display: flex;
     gap: 4rem;
-
     justify-content: center;
+    width: 500px;
 }
+
 
 #span1, #span2 {
     color: black;
@@ -29,3 +30,5 @@
     white-space:nowrap;
     text-overflow: ellipsis;
 }
+
+

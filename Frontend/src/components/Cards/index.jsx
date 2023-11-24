@@ -9,13 +9,13 @@ console.log( pathname );
 
   return (
     <>
-      <div role="cards">
+ <div role="cards" className="cards">
         {
           evento ?
           <div id="divContainer" className={pathname === '/' ? 'home-container' : 'other-container'}>
-                <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg">
+                <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg h-full">
                 <img className={ pathname == '/'? 'w-full h-52' : 'h-48 w-full'}
-              r   src={evento.image ? evento.image : "No hay imagen disponible"}
+                 src={evento.image ? evento.image : "No hay imagen disponible"}
                   alt={evento.place}
                 />
                 <div className="px-3 py-2">
