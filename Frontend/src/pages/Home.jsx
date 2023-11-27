@@ -5,6 +5,7 @@ import Checkbox from '../components/Checkbox';
 import Search from '../components/Search';
 import Card from '../components/Card';
 import Layout from '../layouts/Layout';
+import FloatingLogo from '../components/FloatingLogo';
 
 function Home({ rutaActual, imagen, titulo, altexto }) {
   const eventos = useSelector((store) => store.eventos);
@@ -73,6 +74,7 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
         ) : (
           <p className="texto-blanco">No se encontraron eventos que coincidan con la búsqueda.</p>
         )}
+        <FloatingLogo />
       </Layout>
     </>
   );

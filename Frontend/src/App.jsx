@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import Details from './pages/Details';
 import Stats from './pages/Stats';
 import Error from './components/Error';
+import Cart from "./pages/Cart"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/contact' element={<Contact rutaActual="contact" imagen="./src/assets/img/4.jpg" altexto="Photo collage showing people at a food festival." titulo="CONTACT" />} />
         <Route path='/stats' element={<Stats rutaActual="stats" imagen="./src/assets/img/5.jpg" altexto="Panoramic photo of a concert in a large stadium and attendees holding colorful lights." titulo="STATS" />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

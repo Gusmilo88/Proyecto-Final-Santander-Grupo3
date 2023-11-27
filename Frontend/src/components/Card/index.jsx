@@ -14,11 +14,13 @@ const Card = (props) => {
                 <div className="card-body d-flex justify-content-center align-items-center flex-column">
                     <div className="text-center mb-3">
                         <h5 className="card-title mb-0"><strong>{props.title}</strong></h5>
-                        <p className="card-text">{props.description}</p>
+                        <p id='parrafo' className="card-text">{props.description}</p>
+                        <p className="m-0"><strong>Price: ${props.price}</strong></p>
+                        <hr />
                     </div>
-                    <div className="d-flex justify-content-between align-items-center w-100">
-                    <p className="m-0"><strong>Price: ${props.price}</strong></p>
-                    <Link to={`/details/${props.id}`} className="btn btn-primary">Details</Link>
+                    <div className="flex flex-col">
+                        <Link to={`/details/${props.id}`} id="btn-seeDetail" className="mb-2 inline-block rounded pt-2 pb-2 text-center text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"><i className="fa-solid fa-eye" style={{color: '#ffffff'}}/> Details</Link>
+                        <Link to={`/details/${props.id}`} id="btn-addToCart" className="inline-block rounded px-10 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"><i className="fa-solid fa-cart-shopping" style={{color: '#ffffff'}}/> Add to cart</Link>
                     </div>
                 </div>
             </div>
