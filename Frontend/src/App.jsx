@@ -4,8 +4,6 @@ import Details from "./pages/Details"
 import Home from "./pages/Home"
 import Stats from "./pages/Stats"
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom"
-import UpcomingEvents from "./pages/UpcomingEvents"
-import PastEvents from "./pages/PastEvents"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import ProfilePage from './pages/Profile'
@@ -17,8 +15,6 @@ function App() {
     <>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/upcomingEvents" element={<UpcomingEvents/>}/>
-          <Route path="/pastEvents" element={<PastEvents/>}/>
           <Route path="/details/:id" element={<Details/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/stats" element={<Stats/>}/>
