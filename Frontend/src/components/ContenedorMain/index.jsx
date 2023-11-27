@@ -1,7 +1,7 @@
 function ContenedorMain({ children }) {
     return (
         <>
-            <main className="container container-fluid my-3">
+            <main>
                 {children}
             </main>
 

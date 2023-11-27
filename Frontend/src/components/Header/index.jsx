@@ -4,7 +4,7 @@ import "./style.css";
 const Header = () => {
   return (
     <div>
-      <nav className="dark:bg-zinc-900 border-gray-200 px-4 lg:px-6 py-2.5 ">
+      <nav className="dark:bg-zinc-900 border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to={"/"}>
             <img
