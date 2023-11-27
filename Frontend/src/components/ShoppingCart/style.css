@@ -242,3 +242,14 @@ select.form-control {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+#as {
+    background: linear-gradient(90deg, #009d47 0%, #4caf50 100%);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+#as:hover{
+    background: linear-gradient(90deg, #00c853 0%, #5cff4c 100%);
+}

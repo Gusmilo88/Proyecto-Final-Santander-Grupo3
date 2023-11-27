@@ -12,7 +12,7 @@ const ShoppingCart = () => {
     <table className="table">
       <thead>
         <tr>
-          <th>Product Name</th>
+          <th className="text-center">Product Name</th>
           <th className="text-center">Quantity</th>
           <th className="text-center">Subtotal</th>
           <th className="text-center">Discount</th>
@@ -37,6 +37,10 @@ const ShoppingCart = () => {
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
               </select>
             </div>
           </td>
@@ -61,6 +65,10 @@ const ShoppingCart = () => {
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
               </select>
             </div>
           </td>
@@ -85,6 +93,10 @@ const ShoppingCart = () => {
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
               </select>
             </div>
           </td>
@@ -105,8 +117,8 @@ const ShoppingCart = () => {
     <div className="column text-lg">Subtotal: <span className="text-medium">$289.68</span></div>
   </div>
   <div className="shopping-cart-footer">
-    <div className="column"><Link className="btn btn-outline-secondary" href="#"><i className="icon-arrow-left" />&nbsp;Back to Shopping</Link></div>
-    <div className="column"><Link className="btn btn-primary" href="#" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Update Cart</Link><Link className="btn btn-success" href="#">Checkout</Link></div>
+    <div className="column"><Link className="btn btn-outline-secondary" to={"/"}><i className="icon-arrow-left" />Back to Home</Link></div>
+    <div className="column"><Link id='as' to={"/"}>Buy</Link></div>
   </div>
 </div>
 
