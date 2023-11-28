@@ -1,20 +1,33 @@
-#category-checkboxes label {
-  font-size: 18px;
-  }
-
-#category-checkboxes .form-check {
-  display: flex;
-  align-items: center;
-  margin-right: 12px;
- 
+#checkboxConcert:checked + .category-checkbox-label #checkboxImage {
+  filter: grayscale(0%);
 }
 
-@media (min-width: 1200px) {
-  #category-checkboxes label {
-    font-size: 22px; 
-  }
+#checkboxFood:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
 
-    #category-checkboxes .form-check {
-    margin-right: 20px; 
-  }
+#checkboxCinema:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
+
+#checkboxMuseum:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
+
+#checkboxBooks:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
+
+#checkboxRace:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
+
+#checkboxParty:checked + .category-checkbox-label #checkboxImage {
+filter: grayscale(0%);
+}
+
+#spanCheckbox {
+  font-family: 'Inter', sans-serif;
+  font-size: 5vh;
+  text-shadow: 2px 2px 4px black;
 }

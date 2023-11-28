@@ -16,7 +16,6 @@ function Search(props) {
     <div className="col-12 col-lg-3 mt-3 mt-md-0">
       <form className="d-flex align-items-center mb-3" onSubmit={handleSearch}>
         
-
          {/*Barra de buscar*/}
       <div className="m-4 fle h-full flex justify-end items-center gap-4">
         <div className="relative mb-4 flex w-72 flex-wrap items-stretch">

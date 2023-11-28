@@ -49,12 +49,8 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
     <>
       <Layout>
         <Carrusel imagen={imagen} titulo={titulo} alt={altexto} />
-        <div className="container-fluid mt-5">
-          <div className="row">
-            <Checkbox onCategoryChange={actualizarCategoriasSeleccionadas} categorias={categoriasUnicas} />
-            <Search onSearch={manejarCambioDeBusqueda} />
-          </div>
-        </div>
+        <Search onSearch={manejarCambioDeBusqueda} />
+        <Checkbox onCategoryChange={actualizarCategoriasSeleccionadas} categorias={categoriasUnicas} />
         {loading ? (
           <p>Loading...</p>
         ) : eventosAMostrar.length > 0 ? (
