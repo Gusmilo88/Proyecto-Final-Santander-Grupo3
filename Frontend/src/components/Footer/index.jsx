@@ -65,8 +65,8 @@ const Footer = () => {
       </div>
     </div>
     <div id="footer_copyright" className="w-full bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-zinc-900 dark:text-neutral-200">
-      © 2023 Copyright:
-      <Link to="https://mindhubweb.com/"className="text-neutral-50 dark:text-neutral-50"  target="_blank">MindHub &amp; Santander</Link>
+      © 2023 Copyright: 
+      <Link to="https://mindhubweb.com/"className="text-neutral-50 dark:text-neutral-50"  target="_blank"> MindHub & Santander</Link>
     </div>
    
   </footer>

@@ -1,38 +1,38 @@
 
 .comment {
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.comment:hover {
-  transform: scale(1.05);
- }
-
-.user-rating {
-  display: flex;
-  align-items: center;
-}
-
-.rating-stars {
-  color: #ffd700;
-}
-
-#btn-seeMore,
-#btn-login {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  color: #fff;
-   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
- }
-
-#btn-seeMore:hover,
-#btn-login:hover {
-  background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
-}
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .comment:hover {
+    transform: scale(1.05);
+   }
+  
+  .user-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-stars {
+    color: #ffd700;
+  }
+  
+  #btn-seeMore,
+  #btn-login {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: #fff;
+     border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+   }
+  
+  #btn-seeMore:hover,
+  #btn-login:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+  }
