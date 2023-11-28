@@ -7,7 +7,7 @@ const Card = (props) => {
     return (
         
         <div className="col-12 col-sm-6 col-lg-4 col-xl-3 event-card mb-5" style={{ transform: 'perspective(1000px)', transition: 'transform 0.2s' }}>
-            <div className="card h-100" style={{ transform: 'rotateY(0deg)', transition: 'transform 0.5s' }}>
+            <div className="card h-100" style={{ transition: 'transform 0.5s' }}> 
                 <div className="card-img-container">
                 <img src={props.image} className="card-img-top" alt={props.title} />
                 </div>
