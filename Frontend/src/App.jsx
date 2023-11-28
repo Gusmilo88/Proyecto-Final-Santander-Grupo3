@@ -11,6 +11,8 @@ import { useEffect } from 'react';
 import  eventosActions  from "./store/actions/eventosActions";
 import Login from './pages/Login';
 import ProfilePage from './pages/Profile';
+import Register from "./pages/Register"
+
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +31,7 @@ function App() {
         <Route path='/contact' element={<Contact rutaActual="contact" imagen="./src/assets/images/carrusel8.jpg" altexto="Photo collage showing people at a food festival." titulo="CONTACT" />} />
         <Route path='/stats' element={<Stats rutaActual="stats" imagen="./src/assets/images/carrusel6.jpg" altexto="Panoramic photo of a concert in a large stadium and attendees holding colorful lights." titulo="STATS" />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/user" element={<ProfilePage/>}/>
         <Route path="*" element={<Error />} />
