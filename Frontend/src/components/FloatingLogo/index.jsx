@@ -21,7 +21,7 @@ const FloatingLogo = () => {
       <Link to="#" onClick={handleScrollToTop}>
         <img
           id="imgLogo"
-          className="h-16 w-16" 
+          className="h-14 w-14" 
           src="/src/assets/images/logo.png"
           alt="Logo Amazing Events"
           style={{ borderRadius: '50%' }} 

@@ -1,9 +1,9 @@
 import React from 'react';
-import Cards from '../Cards';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
+import Card from '../Card';
 
 const CarouselDetails = ({ events, currentEvent }) => {
   const futureEvents = events.filter((event) => event.estimate && event._id !== currentEvent._id);
@@ -43,7 +43,7 @@ const CarouselDetails = ({ events, currentEvent }) => {
 
   const slides = futureEvents.map((event, index) => (
     <div key={index} className="carousel-item px-2">
-      <Cards
+      <Card
         evento={event}
         buttonText="See more"
         pathText={`/details/${event._id}`}
