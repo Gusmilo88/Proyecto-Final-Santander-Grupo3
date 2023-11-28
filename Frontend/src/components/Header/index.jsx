@@ -70,7 +70,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to={"/upcomingEvents"}
+                  to={"/upcoming"}
                   className="text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
                   <i
@@ -82,7 +82,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to={"/pastEvents"}
+                  to={"/past"}
                   className="text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
                   <i
