@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import  eventosActions  from "./store/actions/eventosActions";
 import Login from './pages/Login';
+import ProfilePage from './pages/Profile';
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
         <Route path='/stats' element={<Stats rutaActual="stats" imagen="./src/assets/images/carrusel6.jpg" altexto="Panoramic photo of a concert in a large stadium and attendees holding colorful lights." titulo="STATS" />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/user" element={<ProfilePage/>}/>
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
