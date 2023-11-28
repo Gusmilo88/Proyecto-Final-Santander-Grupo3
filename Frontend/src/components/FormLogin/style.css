@@ -33,7 +33,7 @@ input:checked {
 
 .section-login {
     background-image: url('/src/assets/images/luces.jpg');
-    background-size: cover; /* Puedes ajustar 'cover' según tus necesidades */
-    background-position: center; /* Puedes ajustar 'center' según tus necesidades */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
 }

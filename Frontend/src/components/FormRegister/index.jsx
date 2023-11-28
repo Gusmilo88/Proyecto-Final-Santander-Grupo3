@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.css";
 
-const FormRegister = ({buttonText, pathText}) => {
+const FormRegister = () => {
   return (
     <div>
       <section className="bg-gray-50 dark:bg-gray-900">
