@@ -31,7 +31,6 @@ const FormLogin = ({buttonText, pathText}) => {
             </div>
             <Link id="forgot" href="#" className="text-sm font-medium">Forgot password?</Link>
           </div>
-          <button/>
           <p className="text-sm text-white">
             Don’t have an account yet? <Link id="signUp" to={"/register"} className="font-medium">Sign up</Link>
           </p>
