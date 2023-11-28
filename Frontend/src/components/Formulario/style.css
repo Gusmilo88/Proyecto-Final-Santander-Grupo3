@@ -1,0 +1,19 @@
+#contactLeftContainer {
+    background: #313030;
+}
+
+input:focus {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+textarea:focus {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#btn-enviar {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#divRight {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}

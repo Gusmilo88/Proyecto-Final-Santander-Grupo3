@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "./style.css";
+
 
 function Search(props) {
   const [searchText, setSearchText] = useState(''); // Estado para almacenar el texto de búsqueda
