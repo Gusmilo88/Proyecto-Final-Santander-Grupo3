@@ -2,78 +2,38 @@
   padding: 20px;
 }
 
-/* Barra superior */
 .relative.z-10 img {
-  width: 50px;
-  height: 50px;
-}
-
-.relative.z-10 input[type="search"] {
-  margin-left: 10px;
-  padding: 5px;
-  width: 200px;
-  color: white; /* Color del texto blanco */
-}
-
-/* Sección de información del usuario */
-.relative.z-10 section {
-  margin-top: 20px;
-}
-
-.relative.z-10 img[src="imagen.png"] {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
-  float: left;
+  width: 45px;
+  height: 45px;
 }
 
 .relative.z-10 h1 {
   margin-bottom: 10px;
   color: white; /* Color del texto blanco */
 }
-/* Sección de pedidos */
-.relative.z-10 button {
+
+.relative.z-10 button,
+.relative.z-10 .button-ver-eventos {
   margin-top: 10px;
   padding: 8px;
+  max-width: 200px; /* Ancho máximo de los botones */
   background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   margin-right: 10px;
+  overflow: hidden; /* Para evitar que el texto desborde el botón */
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos si el texto es demasiado largo */
+  white-space: nowrap; /* Evitar el salto de línea en el texto largo */
 }
 
 /* Hover en botones */
-.relative.z-10 button:hover {
-  background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
-}
-
-/* Botón para ver eventos */
-.relative.z-10 .button-ver-eventos {
-  margin-top: 20px;
-  padding: 10px;
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* Hover en botón para ver eventos */
+.relative.z-10 button:hover,
 .relative.z-10 .button-ver-eventos:hover {
   background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
 }
 
 
-/* Sección de intereses y eventos que sigue */
-.relative.z-10 h2 {
-  margin-top: 20px;
-  color: white; /* Color del texto blanco */
-}
-
-
-/* Estilos para la barra lateral derecha */
 .relative.z-10 div[style="float: right;"] {
   float: right;
   margin-top: 10px;
@@ -85,22 +45,28 @@
   margin-right: 5px;
 }
 
-.relative.z-10 div[style="float: right;"] span {
-  font-size: 14px;
-  vertical-align: middle;
-  color: white; /* Color del texto blanco */
+.text-small {
+  font-size: 16px;
 }
-
 
 .centered-content {
   text-align: center;
   margin-left: 20%;
-  margin-right: 20%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.75); 
-  border-radius: 30px;
+  margin-right: 5%;
+  padding: 10px;
+  
 }
 
+
+.floating-user-section {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px; /* Ajusta según sea necesario */
+  position: fixed;
+  top: 0;
+  width:20%;
+  z-index: 1000; /* Asegúrate de que tenga un z-index alto para que esté sobre otros elementos */
+  border-radius: 20px;
+}
 
 
 /* Estilos para el texto específico */
@@ -110,10 +76,61 @@
   color: white;
 }
 
-/* Agrega esta nueva clase para la sección flotante */
 .floating-user-section {
-  position: sticky;
-  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 50%;
+  left: 20px; /* Ajusta la posición izquierda según sea necesario */
+  transform: translateY(-50%);
+  z-index: 1000;
+  border-radius: 20px;
   padding: 20px;
-  z-index: 1; /* Asegura que la sección esté por encima del contenido scrollable */
+  text-align: center;
+}
+
+.floating-user-section img {
+  width: 45px;
+  height: 45px;
+}
+
+.floating-user-section h1 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.floating-user-section .d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-user-section p {
+  margin: 0;
+}
+
+.floating-user-section i {
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para pantallas de 425px o menos */
+@media (max-width: 425px) {
+  .relative.z-10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .floating-user-section {
+    position: static;
+    width: 100%; /* O ajusta el ancho según sea necesario */
+    border-radius: 0; /* Elimina el redondeo de la esquina */
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Agrega estilos para el contenido debajo de la sección flotante */
+  .centered-content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }

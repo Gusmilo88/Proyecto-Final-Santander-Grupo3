@@ -1,10 +1,22 @@
-import React from 'react';
-import './style.css'
+import React, { useState } from 'react';
+import EditForm from '/src/components/EditForm';
+import './style.css';
 
 const UserProfile = () => {
+    const [isEditing, setIsEditing] = useState(false);
+
+    // Function to handle the click event of the edit icon
+    const handleEditClick = () => {
+        console.log('Ícono de edición clickeado');
+        setIsEditing(true);
+    };
+
+    const handleCancelEdit = () => {
+        setIsEditing(false);
+    };
+
     return (
         <div className="relative">
-            {/* Video de fondo */}
             <div className="absolute inset-0 overflow-hidden">
                 <video
                     className="w-full h-full object-cover"
@@ -17,42 +29,49 @@ const UserProfile = () => {
                 </video>
             </div>
 
-            <div className="relative z-10 pt-5">
-                <div style={{ float: 'right' }}>
-                    <img src="icono.png" alt="Iconousuario" />
-                    <span>email@usuario.com</span>
-                </div>
-
-
+            <div className="relative z-10 ">
                 <div className="floating-user-section">
-                    <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
-                    <h1>Nombre Completo del Usuario</h1>
+                    <div className="d-flex align-items-center">
+                        <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
+                        <h1 className={`ml-3 text-small`}>Nombre del Usuario</h1>
+                        <i
+                            className="fa-sharp fa-solid fa-pen"
+                            style={{ color: "#ffffff", cursor: "pointer" }}
+                            onClick={handleEditClick}
+                        ></i>
+                    </div>
                     <div className="d-flex">
-                        <p className="mr-3 text-white">Pedidos: 0</p>
-                        <p className="mr-3 text-white">Me Gusta: 0</p>
-                        <p className="mr-3 text-white">Eventos que Sigue: 0</p>
+                        <p className="mr-3 text-white text-small">Pedidos: 0</p>
+                        <p className="mr-3 text-white text-small">Me Gusta: 0</p>
+                        <p className="mr-3 text-white text-small">Eventos que Sigue: 0</p>
                     </div>
                 </div>
 
-                <div className="centered-content mt-5 mb-5">
-                    <div className="mb-5 mt-5 ">
+
+                {isEditing && (
+                    <EditForm onCancel={handleCancelEdit} />
+                )}
+
+                <div className="centered-content mb-5">
+                    <div className="mb-5 ">
                         <h2> <strong>Pedidos</strong></h2>
-                        <div className="py-3 ">
-                            <p>¿Buscás tus entradas? Para ver regalos y transferencias, tenés que verificar tu e-mail.</p>
+                        <div className="py-3">
+                            <p>¿Buscás tus entradas? </p>
+                            <p>Para ver regalos y transferencias, tenés que verificar tu e-mail.</p>
                             <button>Verificá tu e-mail</button>
                             <button>Ver pedidos pasados</button>
                         </div>
                     </div>
                     <div className="mb-5 mt-5">
                         <h2><strong>Intereses</strong></h2>
-                        <div className="py-3 ">
+                        <div className="py-3">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
                         </div>
                     </div>
                     <div className="mb-5 mt-5">
                         <h2><strong>Eventos que Sigue</strong></h2>
-                        <div className="py-3 ">
+                        <div className="py-3">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
                         </div>
@@ -60,7 +79,6 @@ const UserProfile = () => {
                 </div>
             </div>
         </div>
-
     );
 }
 
