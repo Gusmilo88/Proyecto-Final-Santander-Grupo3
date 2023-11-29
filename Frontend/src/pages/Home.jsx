@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import Layout from '../layouts/Layout';
 import FloatingLogo from '../components/FloatingLogo';
 import DivH2 from '../components/DivH2';
+import octagonVideo from '/src/assets/video/octagon.mp4';
 
 function Home({ rutaActual, imagen, titulo, altexto }) {
   const eventos = useSelector((store) => store.eventos);
@@ -63,23 +64,37 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
         <Search onSearch={manejarCambioDeBusqueda} />
         <Checkbox onCategoryChange={actualizarCategoriasSeleccionadas} categorias={categoriasUnicas} />
         <DivH2 title={divH2Title} />
+
         {loading ? (
           <p>Loading...</p>
         ) : eventosAMostrar.length > 0 ? (
-          <section className="container py-3 mt-3">
-            <div id="event-container" className="row g-4">
-              {eventosAMostrar.map((evento) => (
-                <Card
-                  key={evento._id}
-                  id={evento._id}
-                  title={evento.name}
-                  description={evento.description}
-                  price={evento.price}
-                  image={evento.image}
-                />
-              ))}
-            </div>
-          </section>
+          <div style={{ position: 'relative', overflow: 'hidden' }}>
+            <video
+              className="w-full h-full object-cover position-absolute"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ zIndex: -1 }}
+            >
+              <source src={octagonVideo} type="video/mp4" />
+            </video>
+
+            <section className="container py-3 mt-3" style={{ position: 'relative', zIndex: 1 }}>
+              <div id="event-container" className="row g-4">
+                {eventosAMostrar.map((evento) => (
+                  <Card
+                    key={evento._id}
+                    id={evento._id}
+                    title={evento.name}
+                    description={evento.description}
+                    price={evento.price}
+                    image={evento.image}
+                  />
+                ))}
+              </div>
+            </section>
+          </div>
         ) : (
           <p className="texto-blanco">No se encontraron eventos que coincidan con la búsqueda.</p>
         )}

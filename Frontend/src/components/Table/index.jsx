@@ -149,7 +149,7 @@ function Table({ eventsData }) {
           <thead>
             <tr>
               <th colSpan={3} style={{ backgroundColor: 'black', color: 'white' }}>
-                <h5>Upcoming Events Statistics by Category</h5>
+              <h5><strong>UPCOMING EVENTS STATISTICS BY CATEGORY</strong></h5>
               </th>
             </tr>
             <tr>
@@ -181,7 +181,7 @@ function Table({ eventsData }) {
           <thead>
             <tr>
               <th colSpan={3} style={{ backgroundColor: 'black', color: 'white' }}>
-                <h5>Past Events Statistics by Category</h5>
+              <h5><strong>PAST EVENTS STATISTICS BY CATEGORY</strong></h5>
               </th>
             </tr>
             <tr>
