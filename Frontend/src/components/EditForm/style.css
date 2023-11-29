@@ -62,7 +62,7 @@ select {
 }
 
 /* Estilos para el botón de guardar cambios */
-button {
+.btn-editForm {
     width: 100%;
     padding: 10px;
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);

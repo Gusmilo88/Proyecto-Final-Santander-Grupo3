@@ -91,7 +91,7 @@ const EditForm = ({ onCancel }) => {
                         </label>
                     </div>
 
-                    <button type="submit">Guardar Cambios</button>
+                    <button className='btn-editForm' type="submit">Guardar Cambios</button>
                 </form>
             </div>
         </div>

@@ -12,6 +12,7 @@ import  eventosActions  from "./store/actions/eventosActions";
 import Login from './pages/Login';
 import ProfilePage from './pages/Profile';
 import Register from "./pages/Register"
+import Dashboard from './pages/Dashboard';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/user" element={<ProfilePage/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
