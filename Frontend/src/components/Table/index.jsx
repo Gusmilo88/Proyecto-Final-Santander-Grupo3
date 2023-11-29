@@ -108,19 +108,30 @@ function Table({ eventsData }) {
   const { categories: futureCategories, categoryRevenues: futureRevenues, categoryEstimates, categoryCapacity: futureCapacity } = calculateCategoryStatisticsFuturos(eventsData);
 
   return (
-    <>
+
+    <div className="relative">
+  <video
+    className="w-full h-full object-cover fixed top-0 left-0 z-[-1]"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src="./src/assets/video/octagon.mp4" type="video/mp4" />
+  </video>
+
       <div className="container mb-5">
         <table id="events-stats" className="table table-bordered table-fixed mt-5">
           <thead>
             <tr>
               <th colSpan={3} style={{ backgroundColor: 'black', color: 'white' }}>
-                <h5>Events Statistics</h5>
+                       <h5><strong>EVENTS STATISTICS</strong></h5>
               </th>
             </tr>
             <tr>
-              <th className="col-md-4">Events with highest % of assistance</th>
-              <th className="col-md-4">Events with lowest % of assistance</th>
-              <th className="col-md-4">Events with large capacity</th>
+            <th className="col-md-4"><strong>Events with highest % of assistance</strong></th>
+              <th className="col-md-4"><strong>Events with lowest % of assistance</strong></th>
+              <th className="col-md-4"><strong>Events with large capacity</strong></th>
             </tr>
           </thead>
           <tbody>
@@ -142,9 +153,9 @@ function Table({ eventsData }) {
               </th>
             </tr>
             <tr>
-              <th className="col-md-4">Categories</th>
-              <th className="col-md-4">Revenues</th>
-              <th className="col-md-4">Estimate Percentage</th>
+              <th className="col-md-4"><strong>Categories</strong></th>
+              <th className="col-md-4"><strong>Revenues</strong></th>
+              <th className="col-md-4"><strong>Estimate Percentage</strong></th>
             </tr>
           </thead>
           <tbody>
@@ -174,9 +185,9 @@ function Table({ eventsData }) {
               </th>
             </tr>
             <tr>
-              <th className="col-md-4">Categories</th>
-              <th className="col-md-4">Revenues</th>
-              <th className="col-md-4">Percentage of assistance</th>
+            <th className="col-md-4"><strong>Categories</strong></th>
+              <th className="col-md-4"><strong>Revenues</strong></th>
+              <th className="col-md-4"><strong>Percentage of assistance</strong></th>
             </tr>
           </thead>
           <tbody>
@@ -196,7 +207,7 @@ function Table({ eventsData }) {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 

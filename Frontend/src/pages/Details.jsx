@@ -13,7 +13,7 @@ function Details() {
   const [evento, setEvento] = useState(null);
   const [eventos, setEventos] = useState([]);
   const [loading, setLoading] = useState(true);
-
+console.log(id);
   useEffect(() => {
     axios
       .get('/src/data/data.json')

@@ -2,7 +2,9 @@ import React from 'react';
 import './style.css';
 
 function Detalles({ event }) {
+  console.log(event);
   return (
+
     <div className="card mb-3 mx-auto" style={{ position: 'relative', top: 50 }}>
       <div className="row g-0">
         <div className="col-md-5 col-12 d-flex align-items-center justify-content-center">
@@ -27,6 +29,7 @@ function Detalles({ event }) {
         </div>
       </div>
     </div>
+  
   );
 }
 

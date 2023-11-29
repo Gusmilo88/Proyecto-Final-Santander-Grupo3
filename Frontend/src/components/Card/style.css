@@ -30,11 +30,11 @@
 }
 
 #btn-addToCart {
-  background: linear-gradient(90deg, #009d47 0%, #4caf50 100%);
+  background:  #d53369 ;
 
 }
 
 #btn-addToCart:hover {
-  background: linear-gradient(90deg, #94e059 0%, #52d365 100%);
+  background:  #daae51 ;
 }
   

@@ -17,6 +17,11 @@
 }
 
 
+
+div#carouselExampleFade button:hover {
+  background: transparent;
+}
+
 @media (max-width: 425px) {
   .text-3d {
     font-size: 1.5rem; /* Tamaño de fuente para ventanas con ancho de 425px o menos */
@@ -32,4 +37,10 @@
   100% {
     transform: scale(1.10); /* Escala la imagen al 110% al 100% de la animación */
 }
+}
+
+@media (max-width: 425px) {
+  .carousel-caption {
+    margin-left: 100px; /* Establece el margen izquierdo a 100px en pantallas más pequeñas */
+  }
 }

@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
-import "./style.css";
-
+import './style.css';
 
 function Search(props) {
-  const [searchText, setSearchText] = useState(''); // Estado para almacenar el texto de búsqueda
+  const [searchText, setSearchText] = useState('');
 
   const handleSearch = (e) => {
-    e.preventDefault(); // Evita que el formulario se envíe
-
-    // Llama a la función de búsqueda en el componente padre (Home)
+    e.preventDefault();
     props.onSearch(searchText.toLowerCase());
   };
 
   return (
-    <div className="col-12 col-lg-3 mt-3 mt-md-0">
+    <div className="col-12 col-lg-3 mt-3 mt-md-0 d-flex justify-center">
       <form className="d-flex align-items-center mb-3" onSubmit={handleSearch}>
-        
-         {/*Barra de buscar*/}
-      <div className="m-4 fle h-full flex justify-end items-center gap-4">
         <div className="relative mb-4 flex w-72 flex-wrap items-stretch">
           <input
             onChange={(e) => setSearchText(e.target.value)}
@@ -29,7 +23,6 @@ function Search(props) {
             aria-label="Search"
             aria-describedby="button-addon1"
           />
-          {/*Search button*/}
           <button
             className="relative z-[2] flex items-center rounded-r px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
             type="submit"
@@ -51,13 +44,9 @@ function Search(props) {
             </svg>
           </button>
         </div>
-      </div>
       </form>
-
-
     </div>
   );
 }
 
 export default Search;
-

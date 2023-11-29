@@ -6,6 +6,7 @@ import Search from '../components/Search';
 import Card from '../components/Card';
 import Layout from '../layouts/Layout';
 import FloatingLogo from '../components/FloatingLogo';
+import DivH2 from '../components/DivH2';
 
 function Home({ rutaActual, imagen, titulo, altexto }) {
   const eventos = useSelector((store) => store.eventos);
@@ -51,6 +52,7 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
         <Carrusel imagen={imagen} titulo={titulo} alt={altexto} />
         <Search onSearch={manejarCambioDeBusqueda} />
         <Checkbox onCategoryChange={actualizarCategoriasSeleccionadas} categorias={categoriasUnicas} />
+        <DivH2 title="ALL EVENTS" />
         {loading ? (
           <p>Loading...</p>
         ) : eventosAMostrar.length > 0 ? (
@@ -58,6 +60,7 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
             <div id="event-container" className="row g-4">
               {eventosAMostrar.map((evento) => (
                 <Card
+                  key={evento._id}
                   id={evento._id}
                   title={evento.name}
                   description={evento.description}
