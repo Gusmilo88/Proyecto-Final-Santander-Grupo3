@@ -106,7 +106,9 @@ const ShoppingCart = () => {
   </div>
   <div className="shopping-cart-footer">
     <div className="column"><Link className="btn btn-outline-secondary" href="#"><i className="icon-arrow-left" />&nbsp;Back to Shopping</Link></div>
-    <div className="column"><Link className="btn btn-primary" href="#" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Update Cart</Link><Link className="btn btn-success" href="#">Checkout</Link></div>
+    <div className="column">
+      {/* <Link className="btn btn-primary" href="#" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Update Cart</Link> */}
+      <Link Link className="btn btn-success" href="#">Buy</Link></div>
   </div>
 </div>
 
