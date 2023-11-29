@@ -253,10 +253,20 @@ select.form-control {
     -webkit-background-clip: text;
 }
 
-#btnBuyCart {
+#btnCart {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: white;
 }
 
-#btnBuyCart:hover {
+#btnCart:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+}
+
+.btn.btn-outline-secondary {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: white;
+}
+
+.btn.btn-outline-secondary:hover {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
 }
