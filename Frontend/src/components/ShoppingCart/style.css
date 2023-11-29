@@ -1,3 +1,13 @@
+#imgCart{
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+#imgCart:hover {
+    transform: scale(1.05);
+  }
+
+
 body{margin-top:20px;}
 select.form-control:not([size]):not([multiple]) {
     height: 44px;
@@ -70,7 +80,7 @@ select.form-control {
 .wishlist-table .remove-from-cart,
 .order-table .remove-from-cart {
     display: inline-block;
-    color: #5258ff;
+    color: rgb(216, 9, 5);
     font-size: 18px;
     line-height: 1;
     text-decoration: none
@@ -241,4 +251,12 @@ select.form-control {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+#btnBuyCart {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#btnBuyCart:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
 }
