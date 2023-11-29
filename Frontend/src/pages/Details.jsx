@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import Layout from '../layouts/Layout';
 import { useParams } from 'react-router-dom';
 import Detalles from '../components/Detalles';
+import DivH2 from '../components/DivH2';
+import CarouselDetails from '../components/CarouselDetails';
+import Comentarios from '../components/Comentarios'; // Importa el componente de comentarios
 
 function Details() {
   const { id } = useParams();
@@ -12,7 +15,14 @@ function Details() {
   return (
     <Layout>
       {event ? (
-        <Detalles event={event} />
+        <>
+          <DivH2 title="DETAILS" style={{ marginTop: '20px' }} />
+          <Detalles event={event} />
+          <DivH2 title="UPCOMING EVENTS" />
+          <CarouselDetails events={eventos} currentEvent={event} />
+          <DivH2 title="COMENTARIOS" />
+          <Comentarios />
+        </>
       ) : (
         <p>Loading...</p>
       )}
