@@ -6,6 +6,7 @@ import './style.css';
 import Card from '../Card';
 
 const CarouselDetails = ({ events, currentEvent }) => {
+  // Filtra los eventos futuros excluyendo el evento actual
   const futureEvents = events.filter((event) => event.estimate && event._id !== currentEvent._id);
 
   const settings = {
@@ -13,7 +14,7 @@ const CarouselDetails = ({ events, currentEvent }) => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
@@ -44,22 +45,26 @@ const CarouselDetails = ({ events, currentEvent }) => {
   const slides = futureEvents.map((event, index) => (
     <div key={index} className="carousel-item px-2">
       <Card
-        evento={event}
+        id={event._id} 
+        title={event.name}
+        description={event.description}
+        price={event.price}
+        image={event.image}
         buttonText="See more"
-        pathText={`/details/${event._id}`}
+        pathText={`/details/${event.id}`}
         buttonTextCart="Add to cart"
-        pathTextCart={`/details/${event._id}`}
+        pathTextCart={`/details/${event.id}`}
       />
     </div>
   ));
 
   return (
-    <div className="w-70 h-65 md:h-85 lg:h-100" style={{ marginLeft: '30px', marginRight: '30px' }}>
-      <Slider {...settings} className="carousel w-full">
-        {slides}
-      </Slider>
+    <div className="w-75 h-65 md:h-85 lg:h-100 mx-auto p" style={{ marginLeft: '30px', marginRight: '30px' }}> {/* Aquí ajusté el ancho */}
+        <Slider {...settings} className="carousel w-full">
+            {slides}
+        </Slider>
     </div>
-  );
+);
 };
 
 export default CarouselDetails;

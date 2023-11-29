@@ -39,3 +39,6 @@
   background:  #daae51 ;
 }
   
+.card-img-container img {
+  width: 100%;
+}

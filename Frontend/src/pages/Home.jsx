@@ -54,7 +54,7 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
   } else if (rutaActual === 'past') {
     divH2Title = 'PAST EVENTS';
   } else {
-    divH2Title = 'All EVENTS';
+    divH2Title = 'ALL EVENTS';
   }
 
   return (
