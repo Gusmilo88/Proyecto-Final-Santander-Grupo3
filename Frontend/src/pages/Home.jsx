@@ -46,13 +46,23 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
 
   const categoriasUnicas = [...new Set(eventosFiltrados.map((evento) => evento.category))];
 
+  let divH2Title = '';
+
+  if (rutaActual === 'upcoming') {
+    divH2Title = 'UPCOMING EVENTS';
+  } else if (rutaActual === 'past') {
+    divH2Title = 'PAST EVENTS';
+  } else {
+    divH2Title = 'All EVENTS';
+  }
+
   return (
     <>
       <Layout>
         <Carrusel imagen={imagen} titulo={titulo} alt={altexto} />
         <Search onSearch={manejarCambioDeBusqueda} />
         <Checkbox onCategoryChange={actualizarCategoriasSeleccionadas} categorias={categoriasUnicas} />
-        <DivH2 title="ALL EVENTS" />
+        <DivH2 title={divH2Title} />
         {loading ? (
           <p>Loading...</p>
         ) : eventosAMostrar.length > 0 ? (
