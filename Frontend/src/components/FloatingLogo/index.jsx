@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const FloatingLogo = () => {
   const handleScrollToTop = () => {
@@ -16,6 +16,7 @@ const FloatingLogo = () => {
         padding: '10px', 
         borderRadius: '50%', 
         overflow: 'hidden', 
+        zIndex: 2,  // Asegura que el z-index sea mayor que -1 del video
       }}
     >
       <Link to="#" onClick={handleScrollToTop}>
@@ -31,4 +32,4 @@ const FloatingLogo = () => {
   );
 };
 
-export default FloatingLogo;
+export default FloatingLogo

@@ -10,7 +10,7 @@ function Search(props) {
   };
 
   return (
-    <div className="col-12 col-lg-3 mt-3 mt-md-0 d-flex justify-center">
+    <div className="col-12 mt-3 mt-md-0 d-flex justify-center">
       <form className="d-flex align-items-center mb-3" onSubmit={handleSearch}>
         <div className="relative mb-4 flex w-72 flex-wrap items-stretch">
           <input
