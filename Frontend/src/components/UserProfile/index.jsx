@@ -31,7 +31,7 @@ const UserProfile = () => {
             <div className="relative z-10">
                 <div className="floating-user-section">
                     <div className="d-flex align-items-center">
-                        <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
+                        <img className='imgUser' src="/src/assets/images/user.png" alt="Imagen del usuario" />
                         <h1 className="ml-3 text-small">Nombre del Usuario</h1>
                         <i
                             className="fa-sharp fa-solid fa-pen"
@@ -59,23 +59,24 @@ const UserProfile = () => {
                         </div>
                     </div>
                     <div className="contInteres">
-    <h2><strong>Intereses</strong></h2>
-    <div className="contImages">
-        <img className="interest-image" src="/src/assets/images/food.png" alt="Food" />
-        <img className="interest-image" src="/src/assets/images/party.jpg" alt="Party" />
-        <img className="interest-image" src="/src/assets/images/concert.jpg" alt="Concert" />
-    </div>
-</div>
+                        <h2><strong>Intereses</strong></h2>
+                        <div className="contImages">
+                            <img className="interest-image" src="/src/assets/images/cinemauser.jpg" alt="Cinema" />
+                            <img className="interest-image" src="/src/assets/images/fooduser.jpg" alt="Food" />
+                            <img className="interest-image" src="/src/assets/images/partyuser.jpg" alt="Party" />
+                        </div>
+                    </div>
+
+
 
                     <div className="mb-5 mt-5">
                         <h2><strong>Eventos que Sigue</strong></h2>
                         <div className="py-3">
-                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
