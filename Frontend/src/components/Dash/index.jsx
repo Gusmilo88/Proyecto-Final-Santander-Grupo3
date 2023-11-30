@@ -21,7 +21,7 @@ function Dash({ eventsData }) {
   const handleAddProduct = (e) => {
     e.preventDefault();
     // Aquí puedes realizar operaciones adicionales, como enviar datos a la API, actualizar el estado, etc.
-    console.log('Nuevo producto:', newProduct);
+    console.log(newProduct);
     setNewProduct({
       producto: '',
       descripcion: '',
