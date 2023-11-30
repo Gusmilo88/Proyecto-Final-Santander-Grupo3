@@ -1,4 +1,30 @@
-.modal {
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 75%; /* Ancho del formulario */
+    max-width: 800px; /* Ancho máximo del formulario */
+    max-height: 90vh; /* Altura máxima del formulario */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Centra el formulario vertical y horizontalmente */
+  .modal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,89 +34,55 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Ajusta según sea necesario */
-}
-
-.modal-content {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: calc(66.67%); /* Dos tercios del ancho */
-    width: 100%;
-}
-
-/* Estilos para secciones específicas del formulario */
-.contact-info,
-.change-password,
-.payment-method {
-    margin-bottom: 20px;
-}
-
-/* Estilos específicos para etiquetas y entradas del formulario */
-.editForm {
-    display: block;
-    margin-bottom: 15px;
-    color: white; /* Color blanco para las etiquetas */
-    width: calc(50% - 18px); /* Calcula el ancho para que haya dos elementos por fila */
-}
-
-input,
-select {
-    width: calc(50% - 10px); /* Calcula el ancho para que haya dos elementos por fila */
-    padding: 8px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Utiliza flexbox para alinear los elementos en filas */
-.contact-info,
-.change-password,
-.payment-method {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Estilos para el botón de guardar cambios */
-.btn-editForm {
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* Hover en botón de guardar cambios */
-button:hover {
-    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
-}
-strong {
-    display: inline-block; /* Colocar el contenido de strong en una línea */
-    white-space: nowrap; /* Evita que el contenido de strong se divida en múltiples líneas */
-    margin-bottom: 5px; /* Espacio inferior entre etiquetas strong */
-}
-
-strong {
-    display: block; /* Colocar el contenido de strong en un bloque */
-    white-space: nowrap; /* Evita que el contenido de strong se divida en múltiples líneas */
-    margin-bottom: 5px; /* Espacio inferior entre etiquetas strong */
-}
-
-/* Ajuste de la "x" para cerrar el modal */
-.close {
+    z-index: 1000;
+  }
+  
+  .close {
     position: absolute;
     top: 10px;
-    right: 22px;
-    font-size: 28px;
-    color: white; /* Color blanco para el botón de cierre */
+    right: 10px;
+    font-size: 24px;
+    color: #555;
     cursor: pointer;
-    margin-left: 50px; /* Ajusta el margen izquierdo */
-}
-
-.close:hover {
-    color: #d53369; /* Cambia el color al pasar el ratón por encima */
-}
+  }
+  
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .strong-form {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000000e2;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  select,
+  button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
