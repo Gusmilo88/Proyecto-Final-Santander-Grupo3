@@ -12,7 +12,13 @@
     width: 25vh;
     margin: 2vh;
     border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
+
+#imgAboutUs:hover {
+    transform: scale(1.05);
+  }
 
 #nameAboutUs:hover {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
@@ -20,4 +26,3 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
-
