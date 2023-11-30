@@ -2,7 +2,7 @@
   padding: 20px;
 }
 
-.relative.z-10 img {
+.imgUser {
   width: 45px;
   height: 45px;
 }
@@ -133,11 +133,21 @@
 }
 .contImages {
   display: flex;
-  flex-direction: row; /* Alinea las imágenes en fila */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .interest-image {
   width: auto;
-  height: 150px;
-  margin-right: 10px; /* Ajusta el espacio entre las imágenes */
+  height: 17vh;
+  margin: 10px; 
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
+
+.interest-image:hover {
+  transform: scale(1.05);
+}
+

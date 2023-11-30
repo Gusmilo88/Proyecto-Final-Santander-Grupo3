@@ -31,7 +31,7 @@ const UserProfile = () => {
             <div className="relative z-10">
                 <div className="floating-user-section">
                     <div className="d-flex align-items-center">
-                        <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
+                        <img className='imgUser' src="/src/assets/images/user.png" alt="Imagen del usuario" />
                         <h1 className="ml-3 text-small">Nombre del Usuario</h1>
                         <i
                             className="fa-sharp fa-solid fa-pen"
