@@ -27,7 +27,7 @@
 }
 
 /* Estilos específicos para etiquetas y entradas del formulario */
-label {
+.editForm {
     display: block;
     margin-bottom: 15px;
     color: white; /* Color blanco para las etiquetas */
