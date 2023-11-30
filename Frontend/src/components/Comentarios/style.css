@@ -1,0 +1,72 @@
+.comentarios-container {
+  margin: 20px;
+  border-radius: 25px;
+}
+  .comment {
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .comment:hover {
+    transform: scale(1.05);
+  }
+
+  .user-rating {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-stars {
+    color: #ffd700; 
+  }
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  #btn-seeMore {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  #btn-seeMore:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+  }
+  #login-message {
+    color: #000000;
+    margin-right: 10px; /* Ajusta el margen derecho del mensaje según tus preferencias */
+  }
+
+  #btn-login-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #btn-login {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    color: #fff;
+    border: none;
+    padding: 8px; /* Ajusta el relleno del botón según tus preferencias */
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #btn-login:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+  }
+  
+  #btn-login-container button {
+    margin-left: 5px; /* Ajusta el margen izquierdo del botón según tus preferencias */
+  }

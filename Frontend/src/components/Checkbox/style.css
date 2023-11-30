@@ -1,0 +1,27 @@
+
+/* Estilos cuando los checkboxes están marcados */
+#checkboxConcert:checked + .category-checkbox-label img,
+#checkboxFood:checked + .category-checkbox-label img,
+#checkboxCinema:checked + .category-checkbox-label img,
+#checkboxMuseum:checked + .category-checkbox-label img,
+#checkboxBooks:checked + .category-checkbox-label img,
+#checkboxRace:checked + .category-checkbox-label img,
+#checkboxParty:checked + .category-checkbox-label img {
+  filter: grayscale(0%);
+}
+
+/* Estilos para el texto */
+#spanCheckbox {
+  font-family: 'Inter', sans-serif;
+  font-size: 5vh;
+  text-shadow: 2px 2px 4px black;
+}
+/* Estilo para imágenes sin escala de grises */
+.grayscale-0 {
+  filter: grayscale(0%);
+}
+
+/* Estilo para imágenes con escala de grises al 100% */
+.grayscale-100 {
+  filter: grayscale(100%);
+}

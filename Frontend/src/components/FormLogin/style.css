@@ -1,0 +1,39 @@
+input:checked {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#forgot {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#forgot:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#signUp {
+    font-weight: 600;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#signUp:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#signUp:hover {
+    text-decoration: dashed;
+}
+
+.section-login {
+    background-image: url('/src/assets/images/luces.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}

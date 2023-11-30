@@ -1,0 +1,44 @@
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 0!important;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+  }
+  
+#btn-seeDetail {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+#btn-seeDetail:hover {
+    background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+}
+
+#btn-addToCart {
+  background:  #d53369 ;
+
+}
+
+#btn-addToCart:hover {
+  background:  #daae51 ;
+}
+  
+.card-img-container img {
+  width: 100%;
+}

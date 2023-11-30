@@ -1,0 +1,51 @@
+.custom-container {
+    border-radius: 5px;
+}
+.relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+
+.card-title {
+    font-size: 22px; 
+  }
+  
+  .card-text:not([class*="event"]) {
+    font-size: 18px;
+  }
+  
+  .list-unstyled:not([class*="event"]) li {
+    font-size: 18px; 
+  }
+  
+  #btn-addToCart {
+    background:  #d53369 ;
+  
+  }
+  
+  #btn-addToCart:hover {
+    background:  #daae51 ;
+  }
+  
+
+    @media (max-width: 425px) {
+        .custom-container {
+      font-size: 16px; 
+    }
+}
+
+@media (min-width: 768px) {
+    .row {
+      margin-top: 60px; 
+      padding-left: 20px; 
+    }
+  }
+  

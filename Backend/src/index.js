@@ -15,7 +15,7 @@ const swaggerDocs = require('./docs/swagger-openapi.json');
 const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(cors({origin:'http://127.0.0.1:5173'}));
+app.use(cors());
 app.use(passport.initialize());
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
