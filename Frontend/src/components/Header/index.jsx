@@ -1,11 +1,19 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react"; // Importa useState
 
 import "./style.css";
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticación
-
+  const [token, setToken] = useState(null)
+  useEffect(() => {
+    let token = localStorage.getItem('token');
+    setToken(token);
+  },[])
+  const cerrarSesion = () => {
+    localStorage.removeItem('token');
+    setToken(null);
+  }
   return (
     <div>
       <nav className="dark:bg-zinc-900 border-gray-200 px-4 lg:px-6 py-2.5">
@@ -120,6 +128,7 @@ const Header = () => {
                   Stats
                 </Link>
               </li>
+<<<<<<< HEAD
               {isLoggedIn ? (
             // Si está autenticado, no renderizamos el enlace de Login
             <>
@@ -129,6 +138,13 @@ const Header = () => {
             // Si no está autenticado, renderizamos el enlace de Login
             <li>
              <Link
+=======
+              <li>
+                {
+                  token == null 
+                  ?
+                <Link
+>>>>>>> 2782e92eb5cddc1a83ba0b24b2292378c40374b3
                   to={"/login"}
                   className="text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
@@ -138,6 +154,18 @@ const Header = () => {
                   ></i>
                   Login
                 </Link>
+                :
+                <Link
+                  onClick={cerrarSesion}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-circle-xmark"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Cerrar sesión
+                </Link>
+                }
               </li>
               )}
             </ul>

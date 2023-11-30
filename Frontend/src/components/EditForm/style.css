@@ -57,6 +57,7 @@
     font-size: 24px;
     color: #555;
     cursor: pointer;
+<<<<<<< HEAD
   }
   
   form {
@@ -83,6 +84,45 @@
   select,
   button {
     width: calc(100% - 30px);
+=======
+}
+/* Estilos para secciones específicas del formulario */
+.contact-info,
+.change-password,
+.payment-method {
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para etiquetas y entradas del formulario */
+.editForm {
+    display: block;
+    margin-bottom: 15px;
+    color: white; /* Color blanco para las etiquetas */
+    width: calc(50% - 18px); /* Calcula el ancho para que haya dos elementos por fila */
+}
+
+input,
+select {
+    width: calc(50% - 10px); /* Calcula el ancho para que haya dos elementos por fila */
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Utiliza flexbox para alinear los elementos en filas */
+.contact-info,
+.change-password,
+.payment-method {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para el botón de guardar cambios */
+.btn-editForm {
+    width: 100%;
+>>>>>>> 2782e92eb5cddc1a83ba0b24b2292378c40374b3
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
