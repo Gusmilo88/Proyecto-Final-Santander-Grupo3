@@ -1,107 +1,165 @@
-import React, { useState } from 'react';
-import EditForm from '/src/components/EditForm';
-import './style.css';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
-const UserProfile = () => {
-    const [isEditing, setIsEditing] = useState(false);
-
-    // Function to handle the click event of the edit icon
-    const handleEditClick = () => {
-        console.log('Ícono de edición clickeado');
-        setIsEditing(true);
-    };
-
-    const handleCancelEdit = () => {
-        setIsEditing(false);
-    };
-
-    return (
-        <div className="relative">
-            <div className="absolute inset-0 overflow-hidden">
-                <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                >
-                    <source src="/src/assets/video/octagon.mp4" type="video/mp4" />
-                </video>
-            </div>
-
-            <div className="relative z-10 ">
-                <div className="floating-user-section">
-                    <div className="d-flex align-items-center">
-                        <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
-                        <h1 className={`ml-3 text-small`}>Nombre del Usuario</h1>
-                        <i
-                            className="fa-sharp fa-solid fa-pen"
-                            style={{ color: "#ffffff", cursor: "pointer" }}
-                            onClick={handleEditClick}
-                        ></i>
-                    </div>
-                    <div className="d-flex">
-                        <p className="mr-3 text-white text-small">Pedidos: 0</p>
-                        <p className="mr-3 text-white text-small">Me Gusta: 0</p>
-                        <p className="mr-3 text-white text-small">Eventos que Sigue: 0</p>
-                    </div>
-                </div>
-
-
-                {isEditing && (
-                    <EditForm onCancel={handleCancelEdit} />
-                )}
-
-                <div className="centered-content mb-5">
-                    <div className="mb-5 ">
-                        <h2> <strong>Pedidos</strong></h2>
-                        <div className="py-3">
-                            <p>¿Buscás tus entradas? </p>
-                            <p>Para ver regalos y transferencias, tenés que verificar tu e-mail.</p>
-                            <button>Verificá tu e-mail</button>
-                            <button>Ver pedidos pasados</button>
-                        </div>
-                    </div>
-                    <div className="mb-5 mt-5">
-                        <h2><strong>Intereses</strong></h2>
-                        <div className="py-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                                {/*Food checkbox*/}
-        <div
-          className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
-        >
-          
-          <label
-            className="category-checkbox-label relative inline-block -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[7rem] w-[17rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ml-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ml-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-            htmlFor="checkboxFood"
-          >
+const Header = () => {
+  const [token, setToken] = useState(null)
+  useEffect(() => {
+    let token = localStorage.getItem('token');
+    setToken(token);
+  },[])
+  const cerrarSesion = () => {
+    localStorage.removeItem('token');
+    setToken(null);
+  }
+  return (
+    <div>
+      <nav className="dark:bg-zinc-900 border-gray-200 px-4 lg:px-6 py-2.5">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <Link to={"/"}>
             <img
-              src="/src/assets/images/food.png"
-              alt="Concert"
-              className="w-full h-full object-cover absolute top-0 left-0 grayscale transition-all duration-300"
-              id="checkboxImage"
+              id="imgLogo"
+              className="h-16 w-auto"
+              src="/src/assets/images/logo.png"
+              alt="Logo Amazing Events"
             />
-            <div className="w-full h-full object-cover absolute top-0 left-0 grayscale transition-all duration-300">
-      <span id="spanCheckbox" className="absolute inset-0 flex items-center justify-center text-white">
-        FOOD
-      </span>
+          </Link>
+          <div className="flex items-center lg:order-2">
+            <button
+              id="hamburgerButton"
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              className="inline-flex items-center p-2.5 ml-1 text-sm text-white rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <svg
+                className="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul className="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <li>
+                <Link
+                  id="iconsNavMobile"
+                  to={"/"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-house"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/upcoming"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-calendar"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Upcoming Events
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/past"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-calendar-check"
+                    style={{ color: "#fcfcfc" }}
+                  ></i>
+                  Past Events
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/contact"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-envelope"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/stats"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-chart-line"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Stats
+                </Link>
+              </li>
+              <li>
+                {
+                  token == null 
+                  ?
+                <Link
+                  to={"/login"}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-user"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Login
+                </Link>
+                :
+                <Link
+                  onClick={cerrarSesion}
+                  className="text-white block rounded-md px-3 py-2 text-base font-medium"
+                >
+                  <i
+                    className="fa-solid fa-circle-xmark"
+                    style={{ color: "#ffffff" }}
+                  ></i>
+                  Cerrar sesión
+                </Link>
+                }
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
     </div>
-          </label>
-        </div>
-                        </div>
-                    </div>
-                    <div className="mb-5 mt-5">
-                        <h2><strong>Eventos que Sigue</strong></h2>
-                        <div className="py-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
+  );
+};
 
-export default UserProfile;
+export default Header;
