@@ -1,5 +1,5 @@
 import "./style.css";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import { loginRequest } from "../../util/customer";
 
@@ -7,7 +7,7 @@ const FormLogin = ({buttonText, pathText}) => {
 
 const[username , setUsername] = useState ("")
 const[password , setPassword] = useState ("")
-
+const navigate = useNavigate() 
 
 const Loguear = async  (e) => { 
 e.preventDefault();
@@ -19,6 +19,11 @@ const claves =
   }
 
   const respuesta = await loginRequest (claves)
+
+  .then ( response=>{
+navigate("/")
+
+  })
 
   console.log(respuesta);
      };
