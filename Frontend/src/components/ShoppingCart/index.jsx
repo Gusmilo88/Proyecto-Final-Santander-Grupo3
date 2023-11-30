@@ -105,7 +105,7 @@ const ShoppingCart = () => {
     <div className="column text-lg">Subtotal: <span className="text-medium">$ 28.00</span></div>
   </div>
   <div className="shopping-cart-footer">
-    <div className="column"><Link className="btn btn-outline-secondary" to={"/"}><i class="fa-solid fa-arrow-left"></i>Back to home</Link></div>
+    <div className="column"><Link className="btn btn-outline-secondary"><i class="fa-solid fa-arrow-left"></i>Back to home</Link></div>
     <div className="column">
       {/* <Link className="btn btn-primary" href="#" data-toast data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Update Cart</Link> */}
       <Link to={`/`} id="btnCart" className="mb-2 inline-block rounded p-2 text-center text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]">Buy</Link>

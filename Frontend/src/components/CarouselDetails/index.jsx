@@ -14,7 +14,7 @@ const CarouselDetails = ({ events, currentEvent }) => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -54,12 +54,14 @@ const CarouselDetails = ({ events, currentEvent }) => {
         pathText={`/details/${event.id}`}
         buttonTextCart="Add to cart"
         pathTextCart={`/details/${event.id}`}
+        inCarousel={true} // Aquí pasas la nueva prop
       />
     </div>
   ));
+  
 
   return (
-    <div className="w-75 h-65 md:h-85 lg:h-100 mx-auto p" style={{ marginLeft: '30px', marginRight: '30px' }}> {/* Aquí ajusté el ancho */}
+    <div className="w-75 h-65 md:h-85 lg:h-100 mx-auto " style={{ marginLeft: '20px', marginRight: '20px' }}> {/* Aquí ajusté el ancho */}
         <Slider {...settings} className="carousel w-full">
             {slides}
         </Slider>

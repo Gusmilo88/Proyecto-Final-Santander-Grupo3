@@ -58,3 +58,10 @@
     }
   }
   
+  @media (min-width: 1440px) {
+    .row {
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+  }
+  

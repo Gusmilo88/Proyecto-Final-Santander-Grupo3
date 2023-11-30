@@ -19,7 +19,7 @@ const Detalles = ({ event }) => {
       <div className="card mx-auto col-11 text-white" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', fontSize: '22px', maxWidth: '100%', margin: '0 15px', height: '500px' }}>
         <div className="row">
           <div className="col-md-5 col-12 d-flex">
-            <img src={event.image} className="img-fluid rounded-start mx-auto" alt={event.name} style={{ objectFit: 'cover' }} />
+            <img src={event.image} className="img-fluid rounded-start mx-auto" alt={event.name} style={{ objectFit: 'cover', maxHeight: '100%' }} />
           </div>
           <div className="col-md-7 col-12">
             <div className="card-body">
@@ -51,9 +51,9 @@ const Detalles = ({ event }) => {
         </div>
       </div>
     </div>
-
   );
 }
+
 
 export default Detalles;
 
