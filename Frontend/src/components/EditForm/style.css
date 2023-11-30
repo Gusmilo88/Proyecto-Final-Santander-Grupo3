@@ -19,17 +19,6 @@
     width: 100%;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: white; /* Color blanco para el botón de cierre */
-    cursor: pointer;
-}
-.close:hover {
-    color: #d53369; /* Cambia el color al pasar el ratón por encima */
-}
 /* Estilos para secciones específicas del formulario */
 .contact-info,
 .change-password,
@@ -40,8 +29,9 @@
 /* Estilos específicos para etiquetas y entradas del formulario */
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: white; /* Color blanco para las etiquetas */
+    width: calc(50% - 18px); /* Calcula el ancho para que haya dos elementos por fila */
 }
 
 input,
@@ -83,19 +73,6 @@ strong {
     white-space: nowrap; /* Evita que el contenido de strong se divida en múltiples líneas */
     margin-bottom: 5px; /* Espacio inferior entre etiquetas strong */
 }
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-}
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: white; /* Color blanco para las etiquetas */
-}
 
 strong {
     display: block; /* Colocar el contenido de strong en un bloque */
@@ -107,9 +84,13 @@ strong {
 .close {
     position: absolute;
     top: 10px;
-    right: 10px;
-    font-size: 20px;
+    right: 22px;
+    font-size: 28px;
     color: white; /* Color blanco para el botón de cierre */
     cursor: pointer;
-    margin-left: 10px; /* Ajusta el margen izquierdo */
+    margin-left: 50px; /* Ajusta el margen izquierdo */
+}
+
+.close:hover {
+    color: #d53369; /* Cambia el color al pasar el ratón por encima */
 }

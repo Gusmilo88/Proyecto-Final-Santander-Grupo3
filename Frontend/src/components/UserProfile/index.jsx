@@ -46,6 +46,8 @@ const UserProfile = () => {
                         <p className="mr-3 text-white text-small">Eventos que Sigue: 0</p>
                     </div>
                 </div>
+
+
                 {isEditing && (
                     <EditForm onCancel={handleCancelEdit} />
                 )}
