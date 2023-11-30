@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import ProfilePage from './pages/Profile';
 import Register from "./pages/Register"
 import Dashboard from './pages/Dashboard';
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/user" element={<ProfilePage/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
