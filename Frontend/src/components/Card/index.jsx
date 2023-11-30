@@ -3,11 +3,15 @@ import './style.css'
 import { Link } from 'react-router-dom';
 
 const Card = (props) => {
-   
-    return (
-
-        <div className="col-12 col-sm-6 col-lg-4 col-xl-3 event-card mb-5" style={{ transform: 'perspective(1000px)', transition: 'transform 0.2s' }}>
-            <div className="card h-100" style={{ transition: 'transform 0.5s' }}>
+    const cardClass = props.inCarousel ? 'card-carousel' : 'card-default';
+  
+    const cardStyle = props.inCarousel
+      ? { width: '300px', height: '450px' , margin: "0px 20px 0px 20px" } // Estilos específicos para el carrusel
+      : { }; // Estilos predeterminados
+  
+        return (
+            <div className={`col-12 col-sm-6 col-lg-4 col-xl-3 event-card mb-5 ${cardClass}`} style={cardStyle}>
+             <div className="card h-100" style={{ transition: 'transform 0.5s' }}>
                 <div className="card-img-container">
                     <img src={props.image} className="card-img-top" alt={props.title} />
                 </div>

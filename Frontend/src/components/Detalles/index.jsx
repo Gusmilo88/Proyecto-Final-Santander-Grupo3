@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import videoSource from '../../assets/video/octagon.mp4';
 import './style.css';
 
-const YourComponent = ({ event }) => {
+const Detalles = ({ event }) => {
   return (
     <div className="relative w-full h-full">
       <div className="absolute inset-0 overflow-hidden">
@@ -13,13 +13,13 @@ const YourComponent = ({ event }) => {
           loop
           muted
           playsInline
-          src={videoSource} 
+          src={videoSource}
         />
       </div>
       <div className="card mx-auto col-11 text-white" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', fontSize: '22px', maxWidth: '100%', margin: '0 15px', height: '500px' }}>
         <div className="row">
           <div className="col-md-5 col-12 d-flex">
-            <img src={event.image} className="img-fluid rounded-start mx-auto" alt={event.name} style={{ objectFit: 'cover' }} />
+            <img src={event.image} className="img-fluid rounded-start mx-auto" alt={event.name} style={{ objectFit: 'cover', maxHeight: '100%' }} />
           </div>
           <div className="col-md-7 col-12">
             <div className="card-body">
@@ -35,17 +35,27 @@ const YourComponent = ({ event }) => {
                   {event.estimate && <li><strong>Estimate:</strong> {event.estimate}</li>}
                   {event.assistance && <li><strong>Assistance:</strong> {event.assistance}</li>}
                 </ul>
+               <div className=" pt-3"> 
+                <Link
+                  to={`/cart`}
+                  id="btn-addToCart"
+                  className="inline-block rounded px-10 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
+                  style={{ backgroundColor: '#d53369' }}
+                >
+                  <i className="fa-solid fa-cart-shopping" style={{ color: '#ffffff' }} /> Add to cart
+                </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
   );
 }
 
-export default YourComponent;
+
+export default Detalles;
 
 
 

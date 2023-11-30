@@ -13,7 +13,7 @@ const About = () => {
       <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-600">Unlocking Creativity, Building Dreams. Welcome to the heart of our journey! We are a dynamic quartet driven by passion, innovation, and a shared vision to make a difference. Each member of our team brings a unique set of skills and perspectives to the table, forming a powerhouse of creativity. Together, we embark on a mission to turn ideas into reality, crafting digital experiences that leave a lasting impact. Get to know the faces behind the code, the minds behind the design, and the hearts fueling our collective drive. We're not just a team; we're a family, and we can't wait to share our story with you.</p>
     </div> 
     <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-zinc-900">
         <Link>
           <img id='imgAboutUs' className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/andrea.jpg" alt="Andre Avatar" />
         </Link>
@@ -43,7 +43,7 @@ const About = () => {
           </ul>
         </div>
       </div> 
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-zinc-900">
         <Link>
           <img id='imgAboutUs' className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/avelino.jpg" alt="Avelino Avatar" />
         </Link>
@@ -73,7 +73,7 @@ const About = () => {
           </ul>
         </div>
       </div> 
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-zinc-900">
         <Link>
           <img id='imgAboutUs' className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/gus.jpg" alt="Gus Avatar" />
         </Link>
@@ -105,7 +105,7 @@ const About = () => {
           </ul>
         </div>
       </div> 
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-zinc-900">
         <Link>
           <img id='imgAboutUs' className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/src/assets/images/vania.jpg" alt="Vania Avatar" />
         </Link>

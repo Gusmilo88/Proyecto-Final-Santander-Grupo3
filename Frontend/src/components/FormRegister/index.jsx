@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const FormRegister = () => {
+
+  
   return (
     <div>
       <video
