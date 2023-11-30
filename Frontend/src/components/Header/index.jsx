@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react"; // Importa useState
+
 import "./style.css";
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticación
+
   return (
     <div>
       <nav className="dark:bg-zinc-900 border-gray-200 px-4 lg:px-6 py-2.5">
@@ -116,8 +120,15 @@ const Header = () => {
                   Stats
                 </Link>
               </li>
-              <li>
-                <Link
+              {isLoggedIn ? (
+            // Si está autenticado, no renderizamos el enlace de Login
+            <>
+              {/* ... Otros enlaces para usuarios autenticados ... */}
+            </>
+          ) : (
+            // Si no está autenticado, renderizamos el enlace de Login
+            <li>
+             <Link
                   to={"/login"}
                   className="text-white block rounded-md px-3 py-2 text-base font-medium"
                 >
@@ -128,6 +139,7 @@ const Header = () => {
                   Login
                 </Link>
               </li>
+              )}
             </ul>
           </div>
         </div>

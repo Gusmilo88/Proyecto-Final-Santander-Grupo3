@@ -131,3 +131,13 @@
     margin-right: 5%;
   }
 }
+.contImages {
+  display: flex;
+  flex-direction: row; /* Alinea las imágenes en fila */
+}
+
+.interest-image {
+  width: auto;
+  height: 150px;
+  margin-right: 10px; /* Ajusta el espacio entre las imágenes */
+}
