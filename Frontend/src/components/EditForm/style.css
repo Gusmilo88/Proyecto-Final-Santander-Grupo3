@@ -37,10 +37,11 @@
 }
 
 /* Estilos específicos para etiquetas y entradas del formulario */
-label {
+.editForm {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: white; /* Color blanco para las etiquetas */
+    width: calc(50% - 18px); /* Calcula el ancho para que haya dos elementos por fila */
 }
 
 input,
