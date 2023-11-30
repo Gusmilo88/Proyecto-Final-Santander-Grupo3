@@ -14,7 +14,7 @@ const CarouselDetails = ({ events, currentEvent }) => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -43,23 +43,25 @@ const CarouselDetails = ({ events, currentEvent }) => {
   };
 
   const slides = futureEvents.map((event, index) => (
-    <div key={index} className="carousel-item px-2">
-      <Card
-        id={event._id} 
-        title={event.name}
-        description={event.description}
-        price={event.price}
-        image={event.image}
-        buttonText="See more"
-        pathText={`/details/${event.id}`}
-        buttonTextCart="Add to cart"
-        pathTextCart={`/details/${event.id}`}
-      />
-    </div>
-  ));
+    <div key={index} className="carousel-item px-2" style={{ marginRight: '5px' }}>
+    <Card
+      id={event._id} 
+      title={event.name}
+      description={event.description}
+      price={event.price}
+      image={event.image}
+      buttonText="See more"
+      pathText={`/details/${event.id}`}
+      buttonTextCart="Add to cart"
+      pathTextCart={`/details/${event.id}`}
+      inCarousel={true} // Pasas la nueva prop
+    />
+  </div>
+));
+
 
   return (
-    <div className="w-75 h-65 md:h-85 lg:h-100 mx-auto p" style={{ marginLeft: '30px', marginRight: '30px' }}> {/* Aquí ajusté el ancho */}
+    <div className="w-75 h-65 md:h-85 lg:h-100 mx-auto mt-5 " style={{ marginLeft: '20px', marginRight: '20px' }}> {/* Aquí ajusté el ancho */}
         <Slider {...settings} className="carousel w-full">
             {slides}
         </Slider>
