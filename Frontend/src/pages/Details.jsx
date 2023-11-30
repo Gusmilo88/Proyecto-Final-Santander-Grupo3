@@ -16,7 +16,9 @@ function Details() {
     <Layout>
       {event ? (
         <>
-          <DivH2 title="DETAILS" style={{ marginTop: '20px' }} />
+         <div className="details-container mt-3">
+          <DivH2 title="DETAILS" />
+          </div>
           <Detalles event={event} />
           <DivH2 title="UPCOMING EVENTS" />
           <CarouselDetails events={eventos} currentEvent={event} />
