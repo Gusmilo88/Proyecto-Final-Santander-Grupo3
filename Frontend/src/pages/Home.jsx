@@ -17,6 +17,7 @@ function Home({ rutaActual, imagen, titulo, altexto }) {
   const [loading, setLoading] = useState(true);
   const [noEventosEncontrados, setNoEventosEncontrados] = useState(false);
 
+  console.log(eventos.id);
   useEffect(() => {
     if (rutaActual === 'upcoming') {
       const upcomingEvents = eventos.filter((evento) => evento.estimate !== undefined);
