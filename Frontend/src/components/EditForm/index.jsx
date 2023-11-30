@@ -1,82 +1,101 @@
-import React, { useState } from 'react';
-import EditForm from '/src/components/EditForm';
-import './style.css';
+import React, { useState } from "react";
+import "./style.css";
 
-const UserProfile = () => {
-    const [isEditing, setIsEditing] = useState(false);
+const EditForm = ({ onCancel }) => {
+    const [formData, setFormData] = useState({
+        nombre: '',
+        apellido: '',
+        telefono: '',
+        direccion: '',
+        contrasenaActual: '',
+        nuevaContrasena: '',
+        numeroTarjeta: '',
+        cvc: '',
+        fechaExpiracion: '',
+        tipoTarjeta: '',
+    });
 
-    const handleEditClick = () => {
-        console.log('Ícono de edición clickeado');
-        setIsEditing(true);
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
     };
 
-    const handleCancelEdit = () => {
-        setIsEditing(false);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Formulario enviado', formData);
+        onCancel();
     };
 
     return (
-        <div className="relative">
-            <div className="absolute inset-0 overflow-hidden">
-                <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                >
-                    <source src="/src/assets/video/octagon.mp4" type="video/mp4" />
-                </video>
-            </div>
-
-            <div className="relative z-10">
-                <div className="floating-user-section">
-                    <div className="d-flex align-items-center">
-                        <img src="/src/assets/images/user.png" alt="Imagen del usuario" />
-                        <h1 className="ml-3 text-small">Nombre del Usuario</h1>
-                        <i
-                            className="fa-sharp fa-solid fa-pen"
-                            style={{ color: "#ffffff", cursor: "pointer" }}
-                            onClick={handleEditClick}
-                        ></i>
+        <div className="modal">
+            <div className="modal-content">
+                <span className="close" onClick={onCancel}>&times;</span>
+                <form onSubmit={handleSubmit}>
+                    <div className="contact-info">
+                    <h2 className="text-white py-3"><strong>INFORMACION DE CONTACTO</strong></h2>
+                        <label className="editForm">
+                            Nombre:
+                            <input type="text" name="nombre" value={formData.nombre} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Apellido:
+                            <input type="text" name="apellido" value={formData.apellido} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Teléfono:
+                            <input type="text" name="telefono" value={formData.telefono} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Domicilio:
+                            <input type="text" name="direccion" value={formData.direccion} onChange={handleInputChange} />
+                        </label>
                     </div>
-                    <div className="d-flex">
-                        <p className="mr-3 text-white text-small">Pedidos: 0</p>
-                        <p className="mr-3 text-white text-small">Me Gusta: 0</p>
-                        <p className="mr-3 text-white text-small">Eventos que Sigue: 0</p>
-                    </div>
-                </div>
 
-                {isEditing && <EditForm onCancel={handleCancelEdit} />}
-
-                <div className="centered-content mb-5">
-                    <div className="mb-5">
-                        <h2><strong>Pedidos</strong></h2>
-                        <div className="py-3">
-                            <p>¿Buscás tus entradas?</p>
-                            <p>Para ver regalos y transferencias, tenés que verificar tu e-mail.</p>
-                            <button>Verificá tu e-mail</button>
-                            <button>Ver pedidos pasados</button>
-                        </div>
+                    <div className="change-password">
+                    <h2 className="text-white py-3"><strong>CAMBIAR CONTRASEÑA</strong></h2>
+                        <label className="editForm">
+                            Contraseña Actual:
+                            <input type="password" name="contrasenaActual" value={formData.contrasenaActual} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Nueva Contraseña:
+                            <input type="password" name="nuevaContrasena" value={formData.nuevaContrasena} onChange={handleInputChange} />
+                        </label>
+                        
                     </div>
-                    <div className="contInteres">
-    <h2><strong>Intereses</strong></h2>
-    <div className="contImages">
-        <img className="interest-image" src="/src/assets/images/food.png" alt="Food" />
-        <img className="interest-image" src="/src/assets/images/party.jpg" alt="Party" />
-        <img className="interest-image" src="/src/assets/images/concert.jpg" alt="Concert" />
-    </div>
-</div>
 
-                    <div className="mb-5 mt-5">
-                        <h2><strong>Eventos que Sigue</strong></h2>
-                        <div className="py-3">
-                            
-                        </div>
+                    <div className="payment-method">
+                        <h2 className="text-white py-3"><strong>METODO DE PAGO</strong></h2>
+                        <label className="editForm">
+                            Número de Tarjeta:
+                            <input type="text" name="numeroTarjeta" value={formData.numeroTarjeta} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            CVC:
+                            <input type="text" name="cvc" value={formData.cvc} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Fecha de Expiración:
+                            <input type="text" name="fechaExpiracion" value={formData.fechaExpiracion} onChange={handleInputChange} />
+                        </label>
+                        <label className="editForm">
+                            Tipo de Tarjeta:
+                            <select name="tipoTarjeta" value={formData.tipoTarjeta} onChange={handleInputChange}>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">MasterCard</option>
+                                <option value="americanExpress">American Express</option>
+                            </select>
+                        </label>
                     </div>
-                </div>
+
+                    <button className='btn-editForm' type="submit">Guardar Cambios</button>
+                </form>
             </div>
         </div>
     );
-}
+};
 
-export default UserProfile;
+export default EditForm;
