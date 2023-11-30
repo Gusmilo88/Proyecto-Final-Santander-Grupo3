@@ -11,6 +11,7 @@ function Details() {
   const { id } = useParams();
   const eventos = useSelector((state) => state.eventos);
   const event = eventos.find((evento) => evento._id == id);
+  console.log(id);
 
   return (
     <Layout>

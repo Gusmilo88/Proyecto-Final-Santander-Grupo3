@@ -1,3 +1,4 @@
+const Events = require('../Models/Events');
 const EventsService = require('../Services/events.services');
 
 const getAllEvents = async (req, res) => {
@@ -22,6 +23,16 @@ const createdEvents = async (req, res) => {
     try {
         const body = req.body;
         const event = await EventsService.createdEvents(body);
+        res.status(201).json(event);
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const createManyEvents = async (req, res) => {
+    try {
+        const body = req.body;
+        const event = await Events.insertMany(body)
         res.status(201).json(event);
     } catch (error) {
         res.status(500).json({ error: error.message })
@@ -65,5 +76,6 @@ module.exports = {
     createdEvents,
     updateEvent,
     deleteEvent,
-    getCommentByEvent
+    getCommentByEvent,
+    createManyEvents
 }
