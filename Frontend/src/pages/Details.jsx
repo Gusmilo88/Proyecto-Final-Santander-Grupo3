@@ -20,7 +20,8 @@ function Details() {
           <DivH2 title="DETAILS" />
           </div>
           <Detalles event={event} />
-       
+          <DivH2 title="UPCOMING EVENTS" />
+          <CarouselDetails events={eventos} currentEvent={event} />
           <DivH2 title="COMENTARIOS" />
           <Comentarios />
         </>
