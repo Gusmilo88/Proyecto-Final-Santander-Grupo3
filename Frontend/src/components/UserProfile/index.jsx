@@ -59,7 +59,7 @@ const UserProfile = () => {
                         </div>
                     </div>
                     <div className="contInteres">
-                        <h2><strong>Intereses</strong></h2>
+                        <h2 id='h2UserProfile'><strong>Intereses:</strong></h2>
                         <div className="contImages">
                             <img className="interest-image" src="/src/assets/images/cinemauser.jpg" alt="Cinema" />
                             <img className="interest-image" src="/src/assets/images/fooduser.jpg" alt="Food" />
@@ -70,9 +70,10 @@ const UserProfile = () => {
 
 
                     <div className="mb-5 mt-5">
-                        <h2><strong>Eventos que Sigue</strong></h2>
-                        <div className="py-3">
-
+                        <h2 id='h2UserProfile'><strong>Eventos que sigues:</strong></h2>
+                        <div className="contImages">
+                            <img className='imgEventosSigues' src="/src/assets/images/eventosUser1.jpg" alt="" />
+                            <img className='imgEventosSigues' src="/src/assets/images/eventosUser2.jpg" alt="" />
                         </div>
                     </div>
                 </div>
