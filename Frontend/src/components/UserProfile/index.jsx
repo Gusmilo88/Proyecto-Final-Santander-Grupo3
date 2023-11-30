@@ -65,9 +65,10 @@ const UserProfile = () => {
                     <div className="mb-5 mt-5">
                         <h2><strong>Intereses</strong></h2>
                         <div className="py-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus ut unde voluptates,  </p>
-                                {/*Food checkbox*/}
+                           <img src="/src/assets/img/food_miniat.png" alt="" />
+                           <img src="/src/assets/img/party_miniat.png" alt="" />
+                           <img src="/src/assets/img/cinema_miniat.png" alt="" />
+                                
         <div
           className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]"
         >

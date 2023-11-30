@@ -1,5 +1,3 @@
-/* style.css */
-
 .modal {
     display: flex;
     align-items: center;
@@ -17,7 +15,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 8px;
-    max-width: 500px;
+    max-width: calc(66.67%); /* Dos tercios del ancho */
     width: 100%;
 }
 
@@ -28,6 +26,9 @@
     font-size: 20px;
     color: white; /* Color blanco para el botón de cierre */
     cursor: pointer;
+}
+.close:hover {
+    color: #d53369; /* Cambia el color al pasar el ratón por encima */
 }
 /* Estilos para secciones específicas del formulario */
 .contact-info,
@@ -76,4 +77,39 @@ select {
 /* Hover en botón de guardar cambios */
 button:hover {
     background: linear-gradient(90deg, #FF5733 0%, #FFD133 100%);
+}
+strong {
+    display: inline-block; /* Colocar el contenido de strong en una línea */
+    white-space: nowrap; /* Evita que el contenido de strong se divida en múltiples líneas */
+    margin-bottom: 5px; /* Espacio inferior entre etiquetas strong */
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: white; /* Color blanco para las etiquetas */
+}
+
+strong {
+    display: block; /* Colocar el contenido de strong en un bloque */
+    white-space: nowrap; /* Evita que el contenido de strong se divida en múltiples líneas */
+    margin-bottom: 5px; /* Espacio inferior entre etiquetas strong */
+}
+
+/* Ajuste de la "x" para cerrar el modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white; /* Color blanco para el botón de cierre */
+    cursor: pointer;
+    margin-left: 10px; /* Ajusta el margen izquierdo */
 }
