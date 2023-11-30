@@ -120,7 +120,7 @@
   .floating-user-section {
     position: static;
     width: 100%; /* O ajusta el ancho según sea necesario */
-    border-radius: 0; /* Elimina el redondeo de la esquina */
+    border-radius: 5px; /* Elimina el redondeo de la esquina */
     padding: 20px;
     text-align: center;
   }
@@ -130,4 +130,20 @@
     margin-left: 5%;
     margin-right: 5%;
   }
+}
+
+.contImages {
+  display: flex; /* Distribuir las imágenes en línea */
+  display: flex;
+  justify-content: space-around; /* Espaciado uniforme entre las imágenes */
+  flex-wrap: wrap; /* Ajustar el contenido al tamaño del contenedor */
+}
+
+
+.interest-image {
+  width: 50px; /* Ancho de las imágenes */
+  height: 100px; /* Altura ajustada automáticamente */
+  margin: 10px; /* Espacio alrededor de las imágenes */
+  display: block;
+  object-fit: cover; /* Para que la imagen cubra el tamaño especificado */
 }

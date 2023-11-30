@@ -48,7 +48,7 @@ const EditForm = ({ onCancel }) => {
             </h2>
             <label>
               First name:
-              <input
+              <input className="form"
                 type="text"
                 name="nombre"
                 value={formData.nombre}
@@ -57,7 +57,7 @@ const EditForm = ({ onCancel }) => {
             </label>
             <label>
               Last name:
-              <input
+              <input className="form"
                 type="text"
                 name="apellido"
                 value={formData.apellido}
@@ -66,7 +66,7 @@ const EditForm = ({ onCancel }) => {
             </label>
             <label>
               Phone number:
-              <input
+              <input className="form"
                 type="text"
                 name="telefono"
                 value={formData.telefono}
@@ -75,7 +75,7 @@ const EditForm = ({ onCancel }) => {
             </label>
             <label>
               Addres:
-              <input
+              <input className="form"
                 type="text"
                 name="direccion"
                 value={formData.direccion}
@@ -90,7 +90,7 @@ const EditForm = ({ onCancel }) => {
             </h2>
             <label>
               Old password:
-              <input
+              <input className="form"
                 type="password"
                 name="contrasenaActual"
                 value={formData.contrasenaActual}
@@ -99,7 +99,7 @@ const EditForm = ({ onCancel }) => {
             </label>
             <label>
               New password:
-              <input
+              <input className="form"
                 type="password"
                 name="nuevaContrasena"
                 value={formData.nuevaContrasena}
@@ -108,7 +108,7 @@ const EditForm = ({ onCancel }) => {
             </label>
             <label>
               Confirm new password :
-              <input
+              <input className="form"
                 type="password"
                 name="nuevaContrasena"
                 value={formData.nuevaContrasena}
@@ -121,27 +121,27 @@ const EditForm = ({ onCancel }) => {
             <h2 className="text-white py-3">
               <strong className="strong-form">PAYMENT INFORMATION</strong>
             </h2>
-            <label>
+            <label className="form">
               Pay with:
               <button>Credit or debit card</button>
               <button>PayPal account</button>
             </label>
-            <label>
+            <label className="form">
               Card Number:
               <input
                 type="text"
                 name="numeroTarjeta"
                 value={formData.numeroTarjeta}
                 onChange={handleInputChange}/>
-            </label>
+            </label> className="form"
             <div class="form-label-input-pair">
-              <label
+              <label className="form"
                 class="form-label required"
                 id="form-label-creditCardExpirationMonth"
                 for="input-creditCardExpirationMonth">
                 Expiration Date (MM/YY)
               </label>
-              <label
+              <label className="form"
                 class="form-label form-label-month"
                 for="input-creditCardExpirationMonth">
                 Month /
@@ -169,7 +169,7 @@ const EditForm = ({ onCancel }) => {
                 <option value="12">12</option>
               </select>
             </div>
-            <label
+            <label className="form"
               class="form-label form-label-year"
               for="input-creditCardExpirationYear">
               Year
