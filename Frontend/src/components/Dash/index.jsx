@@ -425,7 +425,7 @@ function Dash({ eventsData }) {
                   </div>
                 </th>
                 <td className="px-4 py-3">
-                  <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Desktop PC</span>
+                  <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">category</span>
                 </td>
                 <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">1.47</td>
                 <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">0.47</td>
