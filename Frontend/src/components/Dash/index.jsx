@@ -32,13 +32,19 @@ function Dash({ eventsData }) {
   };
 
   const calculateChartData = (events) => {
-    
+    if (!events || events.length === 0) {
+      return {
+        labels: [],
+        datasets: [],
+      };
+    }
+  
     const categories = [];
     const revenues = [];
-
+  
     events.forEach((event) => {
       const { category, assistance, price } = event;
-
+  
       if (!categories.includes(category)) {
         categories.push(category);
         revenues.push(assistance * price);
@@ -47,7 +53,7 @@ function Dash({ eventsData }) {
         revenues[index] += assistance * price;
       }
     });
-
+  
     return {
       labels: categories,
       datasets: [
@@ -63,11 +69,15 @@ function Dash({ eventsData }) {
       ],
     };
   };
-
+  
   const calculateTableData = (events) => {
+    if (!events) {
+      return [];
+    }
+  
     return events.map((event) => {
       const { producto, descripcion, category, price, capacidad } = event;
-
+  
       return {
         producto,
         descripcion,
@@ -77,6 +87,7 @@ function Dash({ eventsData }) {
       };
     });
   };
+  
 
   const chartData = calculateChartData(eventsData);
   const tableData = calculateTableData(eventsData);
