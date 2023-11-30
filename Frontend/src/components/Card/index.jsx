@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Card = (props) => {
     const cardClass = props.inCarousel ? 'card-carousel' : 'card-default';
-    console.log(props);
   
     const cardStyle = props.inCarousel
       ? { width: '300px', height: '450px' , margin: "0px 20px 0px 20px" } // Estilos específicos para el carrusel
@@ -36,5 +35,4 @@ const Card = (props) => {
 }
 
 export default Card;
-
 

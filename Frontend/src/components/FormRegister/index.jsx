@@ -89,7 +89,7 @@ const handleRegister = async (e) => {
                 </div>
                 <input type="submit" id="btn-seeDetail" className="mb-2 inline-block rounded p-2 text-center text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]" value={"Register"} />
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Already have an account? <Link id="linkLogin" to={"/Login"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
+                  Already have an account? <Link id="linkLogin" to={"/login"} className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
                 </p>
               </form>
             </div>
