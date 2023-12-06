@@ -98,4 +98,13 @@ margin: 5px;
 
 #hamburgerButton {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+/* Ajustes de tamaño */
+        width: 40px; /* Ancho del botón */
+        height: 40px; /* Altura del botón */
+        padding: 5px; /* Espaciado interno */
+/* Otros estilos */
+        border: none; /* Quita el borde si lo tiene */
+        border-radius: 4px; /* Bordes redondeados */
+        cursor: pointer; /* Cursor al pasar por encima */
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
