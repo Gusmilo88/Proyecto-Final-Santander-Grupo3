@@ -133,13 +133,13 @@ const EditForm = ({ onCancel }) => {
                 name="numeroTarjeta"
                 value={formData.numeroTarjeta}
                 onChange={handleInputChange}/>
-            </label> className="form"
+            </label>
             <div class="form-label-input-pair">
               <label className="form"
                 class="form-label required"
                 id="form-label-creditCardExpirationMonth"
                 for="input-creditCardExpirationMonth">
-                Expiration Date (MM/YY)
+                <strong className="expiration"> Expiration Date (MM/YY)</strong>
               </label>
               <label className="form"
                 class="form-label form-label-month"
