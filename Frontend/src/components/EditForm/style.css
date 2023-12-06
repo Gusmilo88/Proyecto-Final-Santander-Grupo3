@@ -15,7 +15,7 @@ body {
   padding: 30px;
   border-radius: 8px;
   width: 55%; /* Ancho del formulario */
-  max-width: 800px; /* Ancho mÃ¡ximo del formulario */
+  max-width: 550px; /* Ancho mÃ¡ximo del formulario */
   max-height: 90vh; /* Altura mÃ¡xima del formulario */
   overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -62,6 +62,8 @@ padding-right: 10px; /* Espaciado a la derecha para separar el texto del input *
 form {
   display: grid;
   gap: 20px;
+  text-align: right; /* Alinea el texto a la derecha */
+  padding-right: -10px; /* Espaciado a la derecha para separar el texto del input */
 }
 
 .strong-form {
@@ -103,6 +105,11 @@ padding-right: -10px; /* Espaciado a la derecha para separar el texto del input 
 
 .expiration{
   color: #000000;
-  font-size: larger;
+  font-size: medium;
   
+}
+
+.numeroTarjeta{
+  border-radius: 5px;
+  font-size: 28px;
 }

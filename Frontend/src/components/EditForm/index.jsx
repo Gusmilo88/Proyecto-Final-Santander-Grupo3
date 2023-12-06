@@ -127,10 +127,10 @@ const EditForm = ({ onCancel }) => {
               <button>PayPal account</button>
             </label>
             <label className="form">
-              Card Number:
+             <strong> Card Number:</strong>
               <input
                 type="text"
-                name="numeroTarjeta"
+                className="numeroTarjeta"
                 value={formData.numeroTarjeta}
                 onChange={handleInputChange}/>
             </label>
